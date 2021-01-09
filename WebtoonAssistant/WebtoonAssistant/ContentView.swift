@@ -7,44 +7,30 @@
 
 import SwiftUI
 
-struct naverWebtoon : Hashable {
-    var name : String
-    var url : String
-    /*
-     var company : String
-     var uploadDay : String or Int (1...7)
-     */
+enum Company {
+    case naver, kakao
 }
-// 나중에 '사이트'(네이버, 카카오 같은거)랑 '요일' 추가해서 구분 가능하도록 만들어야지
+
+struct Webtoon : Hashable {
+    var company : Company //  = ["naver", "kakao", ... ]
+    var name : String
+    var uploadedDay : String
+    var url : String
+}
+// 나중에 '사이트'(네이버, 카카오 같은거)랑 '요일' 추가해서 구분 가능하도록 만들어야지 // 끝
+// enum으로 회사 정보 추가... 회사별로 html 코드가 다른데 어떤식으로 처리할지?
 
 struct ContentView: View {
-//    var myNaverWebtoons : [String: String] = //Dictionary
-//    ["여신강림" : "https://comic.naver.com/webtoon/list.nhn?titleId=703846&weekday=tue",
-//    "프리드로우 " : "https://comic.naver.com/webtoon/list.nhn?titleId=597447&weekday=sat"]
+    // example data
+    var myNaveWebtoon : [Webtoon] =
+        [Webtoon(company : .naver, name : "여신강림", uploadedDay : "화", url : "https://comic.naver.com/webtoon/list.nhn?titleId=703846&weekday=tue"),
+         Webtoon(company : .naver, name : "프리드로우", uploadedDay : "토",url : "https://comic.naver.com/webtoon/list.nhn?titleId=597447&weekday=sat"),
+         Webtoon(company : .naver, name : "민간인 통제구역", uploadedDay : "토",url : "https://comic.naver.com/webtoon/list.nhn?titleId=737377&weekday=sat"),
+         Webtoon(company : .naver, name : "복학왕", uploadedDay : "수",url : "https://comic.naver.com/webtoon/list.nhn?titleId=626907&weekday=wed")]
     
-    var myNaveWebtoon : [naverWebtoon] =
-        [naverWebtoon(name : "여신강림", url : "https://comic.naver.com/webtoon/list.nhn?titleId=703846&weekday=tue"),
-         naverWebtoon(name : "프리드로우", url : "https://comic.naver.com/webtoon/list.nhn?titleId=597447&weekday=sat")]
-    
-    @State var weekday = ""
+    @State var weekday = "월" // default value == 월
     
     var body: some View {
-//        TabView 사용할 경우
-//        NavigationView {
-//            TabView {
-//                homeView()
-//                    .tabItem {
-//                        Text("home")
-//                        Image(systemName: "house.fill")
-//                    }.tag(0)
-//                bookmarkView()
-//                    .tabItem {
-//                        Text("bookmark")
-//                        Image(systemName: "bookmark.circle.fill")
-//                    }.tag(1)
-//            }
-//        }
-        
         NavigationView {
             ZStack(alignment: .bottomTrailing) {
                 // 리스트 자체를 Function or View로?
@@ -63,24 +49,25 @@ struct ContentView: View {
                     
                     Text(weekday + "요웹툰")
                         .font(.headline)
-//                        .foregroundColor(.white)
                         .fontWeight(.black)
                         .frame(width : 300, height: 30)
-//                        .background(Color.green)
-//                        .cornerRadius(20)
                     
                     List {
-                        Section (header: Text("Naver Webtoon")) {
+                        Section (header: Text("Naver Webtoon")
+                                    .foregroundColor(.black)
+                                    .font(.system(size : 20))
+                        ) {
                             ForEach(myNaveWebtoon, id : \.self) { webtoon in
-                                //Text(webtoon.name + webtoon.url)
-                                NavigationLink(destination : myWebView(urlToLoad: webtoon.url))
-                                {
-                                    Text(webtoon.name)
+                                if webtoon.uploadedDay == weekday {
+                                    webtoonCard(titleName: webtoon.name, urlAddress: webtoon.url)
                                 }
                             }
                         }
-                        Section (header: Text("Kakao Webtoon")) {
-                            // Dummy
+                        Section (header: Text("Kakao Webtoon")
+                                    .foregroundColor(.black)
+                                    .font(.system(size : 20))
+                        ) {
+                            // Dummy Data
                             Text("kakao webtoon 1")
                             Text("kakao webtoon 2")
                             Text("kakao webtoon 3")
@@ -90,7 +77,7 @@ struct ContentView: View {
                     
                 // add webtoon that user want to subscribe
                 Button(action: {
-                    
+
                 }, label: {
                     Image(systemName: "plus")
                         .font(.system(size : 30))
@@ -101,8 +88,24 @@ struct ContentView: View {
                         .padding(.trailing, 20)
                 })
                 
+                
             } // ZStack
             .navigationTitle("내가 보는 웹툰")
+            .toolbar(content: {
+                ToolbarItem(placement: .navigationBarTrailing, content: {
+                    Menu(content: {
+                        // 안에 들어갈 내용
+                    }, label: {
+                        // 버튼 모양, 생김새
+                        Image(systemName : "person.crop.circle.fill")
+                            .font(.system(size : 30))
+                            .foregroundColor(.black)
+                    }) // Menu
+                    
+                }) // ToolbarItem
+                
+            }) // toolbar
+            
         } // NavigationView
     }
 }
