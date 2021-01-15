@@ -1,5 +1,5 @@
 //
-//  myWebView.swift
+//  WebView.swift
 //  WebtoonAssistant
 //
 //  Created by 박규림 on 2021/01/04.
@@ -8,7 +8,7 @@
 import SwiftUI
 import WebKit
 
-struct myWebView : UIViewRepresentable {
+struct WebView : UIViewRepresentable {
     var urlToLoad : String
     
     func makeUIView(context: Context) -> WKWebView {
@@ -23,7 +23,7 @@ struct myWebView : UIViewRepresentable {
         return webview
     }
     
-    func updateUIView(_ uiView: WKWebView, context: UIViewRepresentableContext<myWebView>) {
+    func updateUIView(_ uiView: WKWebView, context: UIViewRepresentableContext<WebView>) {
         
     }
 }

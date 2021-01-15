@@ -12,6 +12,7 @@ struct WebtoonAssistantApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            //myWebtoon()
         }
     }
 }
