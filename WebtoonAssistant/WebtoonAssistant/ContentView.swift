@@ -7,28 +7,26 @@
 
 import SwiftUI
 
-//enum Company {
-//    case naver, daum
-//}
-//
-//struct Webtoon : Hashable {
-//    var company : Company //  = ["naver", "kakao", ... ]
-//    var name : String
-//    var uploadedDay : String
-//    var url : String
-//}
-//// enum으로 회사 정보 추가... 회사별로 html 코드가 다른데 어떤식으로 처리할지?
+enum Company {
+    case naver, daum
+}
+// enum으로 회사 정보 추가... 회사별로 html 코드가 다른데 어떤식으로 처리할지?
 
-// 다른 뷰에서 전체 웹툰 정보를 받아서 웹툰 배열에 저장
-// -> 북마크한 웹툰만 메인 페이지에 보이도록 설정
+struct Webtoon : Hashable {
+    var company : Company //  = ["naver", "kakao", ... ]
+    var name : String
+    var uploadedDay : String
+    var url : String
+    var bookmarked : Bool = false
+}
 
-struct ContentView: View {
-    // example data
-    var myNaveWebtoon : [Webtoon] =
-        [Webtoon(company : .naver, name : "여신강림", uploadedDay : "tue", url : "https://comic.naver.com/webtoon/list.nhn?titleId=703846&weekday=tue", bookmarked: true),
-         Webtoon(company : .naver, name : "프리드로우", uploadedDay : "sat",url : "https://comic.naver.com/webtoon/list.nhn?titleId=597447&weekday=sat", bookmarked: true),
-         Webtoon(company : .naver, name : "민간인 통제구역", uploadedDay : "sat",url : "https://comic.naver.com/webtoon/list.nhn?titleId=737377&weekday=sat", bookmarked: true),
-         Webtoon(company : .naver, name : "복학왕", uploadedDay : "wed",url : "https://comic.naver.com/webtoon/list.nhn?titleId=626907&weekday=wed", bookmarked: true)]
+struct ContentView : View {
+//    // example data
+//    var myNaverWebtoon : [Webtoon] =
+//        [Webtoon(company : .naver, name : "여신강림", uploadedDay : "tue", url : "https://comic.naver.com/webtoon/list.nhn?titleId=703846&weekday=tue", bookmarked: true),
+//         Webtoon(company : .naver, name : "프리드로우", uploadedDay : "sat",url : "https://comic.naver.com/webtoon/list.nhn?titleId=597447&weekday=sat", bookmarked: true),
+//         Webtoon(company : .naver, name : "민간인 통제구역", uploadedDay : "sat",url : "https://comic.naver.com/webtoon/list.nhn?titleId=737377&weekday=sat", bookmarked: true),
+//         Webtoon(company : .naver, name : "복학왕", uploadedDay : "wed",url : "https://comic.naver.com/webtoon/list.nhn?titleId=626907&weekday=wed", bookmarked: true)]
 
     @State var weekday = "mon" // default value == 월, monday
     @State var showAdd : Bool = false
@@ -56,16 +54,18 @@ struct ContentView: View {
                         .frame(width : 300, height: 30)
                     
                     List {
-                        Section (header: Text("Naver Webtoon")
-                                    .foregroundColor(.black)
-                                    .font(.system(size : 20))
-                        ) {
-                            ForEach(myNaveWebtoon, id : \.self) { webtoon in
-                                if webtoon.uploadedDay == weekday {
-                                    webtoonCard(Webtoon: webtoon)
-                                }
-                            }
-                        }
+                        naverWebtoonList(weekday : weekday)
+//                        Section (header: Text("Naver Webtoon")
+//                                    .foregroundColor(.black)
+//                                    .font(.system(size : 20))
+//                        ) {
+//                            ForEach(myNaverWebtoon, id : \.self) { webtoon in
+//                                if webtoon.uploadedDay == weekday {
+//                                    webtoonCard(Webtoon: webtoon)
+//                                }
+//                            }
+//                        }
+                        
                         Section (header: Text("Daum Webtoon")
                                     .foregroundColor(.black)
                                     .font(.system(size : 20))

@@ -1,47 +1,40 @@
 //
-//  webtoonData.swift
+//  naverWebtoonData.swift
 //  WebtoonAssistant
 //
-//  Created by 박규림 on 2021/01/13.
+//  Created by 박규림 on 2021/01/21.
 //
 
 import SwiftUI
 import SwiftSoup
 
-enum Company {
-    case naver, daum
-}
-// enum으로 회사 정보 추가... 회사별로 html 코드가 다른데 어떤식으로 처리할지?
-
-struct Webtoon : Hashable {
-    var company : Company //  = ["naver", "kakao", ... ]
-    var name : String
-    var uploadedDay : String
-    var url : String
-    var bookmarked : Bool = false
-}
+var myNaverWebtoon : [Webtoon] =
+    [Webtoon(company : .naver, name : "여신강림", uploadedDay : "tue", url : "https://comic.naver.com/webtoon/list.nhn?titleId=703846&weekday=tue", bookmarked: true),
+     Webtoon(company : .naver, name : "프리드로우", uploadedDay : "sat",url : "https://comic.naver.com/webtoon/list.nhn?titleId=597447&weekday=sat", bookmarked: true),
+     Webtoon(company : .naver, name : "민간인 통제구역", uploadedDay : "sat",url : "https://comic.naver.com/webtoon/list.nhn?titleId=737377&weekday=sat", bookmarked: true),
+     Webtoon(company : .naver, name : "복학왕", uploadedDay : "wed",url : "https://comic.naver.com/webtoon/list.nhn?titleId=626907&weekday=wed", bookmarked: true)]
 
 func getNaverWebtoon(weekday : String) -> [Webtoon] {
     var returnWebtoon : [Webtoon] = []
     var temp : Webtoon = Webtoon(company: .naver, name: "", uploadedDay: "", url: "")
     var weekdayInt : Int {
         switch weekday {
-        case "mon" :
-            return 0
-        case "tue" :
-            return 1
-        case "wed" :
-            return 2
-        case "thu" :
-            return 3
-        case "fri" :
-            return 4
-        case "sat" :
-            return 5
-        case "sun" :
-            return 6
-        default:
-            return -1
+            case "mon" :
+                return 0
+            case "tue" :
+                return 1
+            case "wed" :
+                return 2
+            case "thu" :
+                return 3
+            case "fri" :
+                return 4
+            case "sat" :
+                return 5
+            case "sun" :
+                return 6
+            default:
+                return -1
         }
     }
     
@@ -92,36 +85,53 @@ func getNaverWebtoon(weekday : String) -> [Webtoon] {
 
 func weekdayToKor(weekday : String) -> String {
     switch weekday {
-    case "mon":
-        return "월"
-    case "tue":
-        return "화"
-    case "wed":
-        return "수"
-    case "thu":
-        return "목"
-    case "fri":
-        return "금"
-    case "sat":
-        return "토"
-    case "sun":
-        return "일"
-    default:
-        return "월"
+        case "mon":
+            return "월"
+        case "tue":
+            return "화"
+        case "wed":
+            return "수"
+        case "thu":
+            return "목"
+        case "fri":
+            return "금"
+        case "sat":
+            return "토"
+        case "sun":
+            return "일"
+        default:
+            return "월"
     }
+}
+
+func addToNaverBookmark(Webtoon : Webtoon) {
+    myNaverWebtoon.append(Webtoon)
+}
+struct naverWebtoonList : View {
+    var weekday : String
+    
+    init(weekday : String) {
+        self.weekday = weekday
+    }
+    
+    var body : some View {
+        
+        Section (header: Text("Naver Webtoon")
+                    .foregroundColor(.black)
+                    .font(.system(size : 20))
+        ) {
+            ForEach(myNaverWebtoon, id : \.self) { webtoon in
+                if webtoon.uploadedDay == weekday {
+                    webtoonCard(Webtoon: webtoon)
+                }
+            }
+        } // Section
+        
+    } // body
 }
 
 struct addNaverwebtoon : View {
     @State var selectedWeekday : String = "mon"
-    var todayWebtoon : [String: [Webtoon]] {
-        ["mon" : getNaverWebtoon(weekday: "mon"),
-        "tue" : getNaverWebtoon(weekday: "tue"),
-        "wed" : getNaverWebtoon(weekday: "wed"),
-        "thu" : getNaverWebtoon(weekday: "thu"),
-        "fri" : getNaverWebtoon(weekday: "fri"),
-        "sat" : getNaverWebtoon(weekday: "sat"),
-        "sun" : getNaverWebtoon(weekday: "sun")]
-    }
     
     var body: some View {
         VStack {
@@ -134,16 +144,16 @@ struct addNaverwebtoon : View {
                 Text("토").tag("sat")
                 Text("일").tag("sun")
             }
-                .pickerStyle(SegmentedPickerStyle())
-                .padding()
+            .pickerStyle(SegmentedPickerStyle())
+            .padding()
+            
             Text(weekdayToKor(weekday : selectedWeekday) + "요웹툰")
                 .font(.headline)
                 .fontWeight(.black)
                 .frame(width : 300, height: 30)
-           
             
             List {
-                ForEach(todayWebtoon[selectedWeekday]!, id : \.self) { dayWebtoon in
+                ForEach(getNaverWebtoon(weekday: selectedWeekday), id : \.self) { dayWebtoon in
                     webtoonCardBookmark(Webtoon: dayWebtoon)
                 }
             }

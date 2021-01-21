@@ -59,6 +59,7 @@ func webScrappingFunc(urlAddress : String)-> webtoonInfo {
     return information
 }
 
+
 struct webtoonCard : View {
     var Webtoon : Webtoon
     var webtoonInformation : webtoonInfo // include image information    
@@ -95,6 +96,7 @@ struct webtoonCard : View {
 
 
 struct webtoonCardBookmark : View {
+    @State var isClicked : Bool = false
     var Webtoon : Webtoon
     var webtoonInformation : webtoonInfo // include image information
     
@@ -103,24 +105,27 @@ struct webtoonCardBookmark : View {
         self.Webtoon = Webtoon
         webtoonInformation = webScrappingFunc(urlAddress: Webtoon.url)
     }
+    
     var body: some View {
-//        NavigationLink(destination: WebView(urlToLoad : Webtoon.url),
-//            label: {
-                HStack {
-                    WebView(urlToLoad: webtoonInformation.imageSource)
-                        .frame(width : 100, height: 80) // thumbnail
-                    Text(Webtoon.name)
-                        .fontWeight(.bold)
-                    Spacer()
-                    Button(action : {
-                        //Webtoon.bookmarked.toggle()
-                    }) {
-                        Image(systemName: "heart.fill")
-                            .foregroundColor(Webtoon.bookmarked ? Color.red : Color.gray)
-                    }
-                } // HStack
-//            }
-//        ) // Navigation Link
+        HStack {
+            WebView(urlToLoad: webtoonInformation.imageSource)
+                .frame(width : 100, height: 80) // thumbnail
+            Text(Webtoon.name)
+                .fontWeight(.bold)
+            Spacer()
+            Button(action : {
+                //Webtoon.bookmarked.toggle()
+                print("\(Webtoon.name) clicked")
+                addToNaverBookmark(Webtoon: Webtoon)
+                isClicked = true
+            }) {
+                Image(systemName: "heart.fill")
+                    .foregroundColor(isClicked ? Color.red : Color.gray)
+                    .font(.system(size : 30))
+            }.alert(isPresented: $isClicked, content: {
+                Alert(title: Text("북마크에 추가"), message: Text("북마크에 추가되었습니다."), dismissButton: .default(Text("확인")))
+            })
+        } // HStack
         
     }
 }
