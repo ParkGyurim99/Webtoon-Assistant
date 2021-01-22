@@ -114,13 +114,13 @@ struct webtoonCardBookmark : View {
                 .fontWeight(.bold)
             Spacer()
             Button(action : {
-                //Webtoon.bookmarked.toggle()
                 print("\(Webtoon.name) clicked")
-                addToNaverBookmark(Webtoon: Webtoon)
+                addToNaverBookmark(webtoon: Webtoon)
                 isClicked = true
             }) {
                 Image(systemName: "heart.fill")
-                    .foregroundColor(isClicked ? Color.red : Color.gray)
+                    //.foregroundColor(isClicked ? Color.red : Color.gray)
+                    .foregroundColor(isBookmarked(name: Webtoon.name) ? Color.red : Color.gray)
                     .font(.system(size : 30))
             }.alert(isPresented: $isClicked, content: {
                 Alert(title: Text("북마크에 추가"), message: Text("북마크에 추가되었습니다."), dismissButton: .default(Text("확인")))
@@ -128,4 +128,13 @@ struct webtoonCardBookmark : View {
         } // HStack
         
     }
+}
+
+func isBookmarked(name : String) -> Bool {
+    for i in 0..<myNaverWebtoon.count {
+        if name == myNaverWebtoon[i].name {
+            return true
+        }
+    }
+    return false
 }

@@ -16,7 +16,7 @@ var myNaverWebtoon : [Webtoon] =
 
 func getNaverWebtoon(weekday : String) -> [Webtoon] {
     var returnWebtoon : [Webtoon] = []
-    var temp : Webtoon = Webtoon(company: .naver, name: "", uploadedDay: "", url: "")
+    var temp : Webtoon = Webtoon(company: .naver, name: "", uploadedDay: "", url: "", bookmarked: false)
     var weekdayInt : Int {
         switch weekday {
             case "mon" :
@@ -61,7 +61,7 @@ func getNaverWebtoon(weekday : String) -> [Webtoon] {
 //        print(temp)
 
         for i in 0..<targetDayWebtoon.count {
-            var tempWebtoon = Webtoon(company: .naver, name: "", uploadedDay: weekdayString, url: "")
+            var tempWebtoon = Webtoon(company: .naver, name: "", uploadedDay: weekdayString, url: "", bookmarked: false)
             
             temp.name = try targetDayWebtoon[i].select("img").attr("alt")
             temp.url = try targetDayWebtoon[i].attr("href")
@@ -104,9 +104,22 @@ func weekdayToKor(weekday : String) -> String {
     }
 }
 
-func addToNaverBookmark(Webtoon : Webtoon) {
-    myNaverWebtoon.append(Webtoon)
+func addToNaverBookmark(webtoon : Webtoon) {
+    var addedWebtoon : Webtoon
+    var check = 0
+    
+    addedWebtoon = Webtoon(company: webtoon.company, name: webtoon.name, uploadedDay: webtoon.uploadedDay, url: webtoon.url, bookmarked: true)
+    
+    for i in 0..<myNaverWebtoon.count {
+        if addedWebtoon.name == myNaverWebtoon[i].name {
+            check = 1
+        }
+    }
+    if check == 0 {
+        myNaverWebtoon.append(addedWebtoon)
+    }
 }
+
 struct naverWebtoonList : View {
     var weekday : String
     
@@ -130,7 +143,8 @@ struct naverWebtoonList : View {
     } // body
 }
 
-struct addNaverwebtoon : View {
+struct allNaverwebtoonList : View {
+    
     @State var selectedWeekday : String = "mon"
     
     var body: some View {

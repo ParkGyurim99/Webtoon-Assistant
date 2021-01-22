@@ -10,14 +10,12 @@ import SwiftUI
 enum Company {
     case naver, daum
 }
-// enum으로 회사 정보 추가... 회사별로 html 코드가 다른데 어떤식으로 처리할지?
-
 struct Webtoon : Hashable {
     var company : Company //  = ["naver", "kakao", ... ]
     var name : String
     var uploadedDay : String
     var url : String
-    var bookmarked : Bool = false
+    var bookmarked : Bool
 }
 
 struct ContentView : View {
@@ -78,7 +76,6 @@ struct ContentView : View {
                     }
                 } // VStack
                 
-
                 // add webtoon to subscribe
                 if showAdd == false {
                 Button(action: {
@@ -105,7 +102,7 @@ struct ContentView : View {
                             .padding(.top, 10)
                         Spacer()
                         HStack {
-                            NavigationLink(destination : addNaverwebtoon()) {
+                            NavigationLink(destination : allNaverwebtoonList()) {
                             Text("네이버 웹툰")
                             Image(systemName : "greaterthan.circle")
                             }
@@ -121,8 +118,6 @@ struct ContentView : View {
                             Image(systemName: "xmark")
                                 .font(.system(size : 30))
                         }.padding(.bottom, 10)
-                        
-                        
                     }
                     .foregroundColor(.black)
                     .padding()

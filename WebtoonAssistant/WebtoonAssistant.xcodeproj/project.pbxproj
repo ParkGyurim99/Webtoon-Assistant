@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A242FC325BAA3C7007FCFCA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A242FC225BAA3C7007FCFCA /* GoogleService-Info.plist */; };
 		1A9AB05625A88DB300576D5F /* webtoonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB05525A88DB300576D5F /* webtoonCard.swift */; };
 		1A9AB08A25AEDBEF00576D5F /* settingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB08925AEDBEF00576D5F /* settingsView.swift */; };
 		1A9AB09825B9BF2200576D5F /* naverWebtoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB09725B9BF2200576D5F /* naverWebtoon.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A242FC225BAA3C7007FCFCA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1A9AB05525A88DB300576D5F /* webtoonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webtoonCard.swift; sourceTree = "<group>"; };
 		1A9AB08925AEDBEF00576D5F /* settingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsView.swift; sourceTree = "<group>"; };
 		1A9AB09725B9BF2200576D5F /* naverWebtoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = naverWebtoon.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				1ACED8E825A217EC0014D254 /* WebtoonAssistantApp.swift */,
 				1ACED8EC25A217EE0014D254 /* Assets.xcassets */,
 				1ACED8F125A217EE0014D254 /* Info.plist */,
+				1A242FC225BAA3C7007FCFCA /* GoogleService-Info.plist */,
 				1ACED8EE25A217EE0014D254 /* Preview Content */,
 				1ACED8FB25A21AAA0014D254 /* WebView.swift */,
 				1A9AB08925AEDBEF00576D5F /* settingsView.swift */,
@@ -169,6 +172,7 @@
 			files = (
 				1ACED8F025A217EE0014D254 /* Preview Assets.xcassets in Resources */,
 				1ACED8ED25A217EE0014D254 /* Assets.xcassets in Resources */,
+				1A242FC325BAA3C7007FCFCA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
