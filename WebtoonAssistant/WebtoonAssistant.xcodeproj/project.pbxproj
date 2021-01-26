@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1A242FC325BAA3C7007FCFCA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A242FC225BAA3C7007FCFCA /* GoogleService-Info.plist */; };
-		1A9AB05625A88DB300576D5F /* webtoonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB05525A88DB300576D5F /* webtoonCard.swift */; };
 		1A9AB08A25AEDBEF00576D5F /* settingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB08925AEDBEF00576D5F /* settingsView.swift */; };
-		1A9AB09825B9BF2200576D5F /* naverWebtoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB09725B9BF2200576D5F /* naverWebtoon.swift */; };
-		1A9AB09E25B9C53700576D5F /* daumWebtoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB09D25B9C53700576D5F /* daumWebtoon.swift */; };
+		1A9AB09825B9BF2200576D5F /* myWebtoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB09725B9BF2200576D5F /* myWebtoon.swift */; };
 		1ACED8E925A217EC0014D254 /* WebtoonAssistantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACED8E825A217EC0014D254 /* WebtoonAssistantApp.swift */; };
 		1ACED8EB25A217EC0014D254 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACED8EA25A217EC0014D254 /* ContentView.swift */; };
 		1ACED8ED25A217EE0014D254 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ACED8EC25A217EE0014D254 /* Assets.xcassets */; };
@@ -22,10 +20,8 @@
 
 /* Begin PBXFileReference section */
 		1A242FC225BAA3C7007FCFCA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		1A9AB05525A88DB300576D5F /* webtoonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webtoonCard.swift; sourceTree = "<group>"; };
 		1A9AB08925AEDBEF00576D5F /* settingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsView.swift; sourceTree = "<group>"; };
-		1A9AB09725B9BF2200576D5F /* naverWebtoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = naverWebtoon.swift; sourceTree = "<group>"; };
-		1A9AB09D25B9C53700576D5F /* daumWebtoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = daumWebtoon.swift; sourceTree = "<group>"; };
+		1A9AB09725B9BF2200576D5F /* myWebtoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myWebtoon.swift; sourceTree = "<group>"; };
 		1ACED8E525A217EC0014D254 /* WebtoonAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebtoonAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ACED8E825A217EC0014D254 /* WebtoonAssistantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebtoonAssistantApp.swift; sourceTree = "<group>"; };
 		1ACED8EA25A217EC0014D254 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,9 +75,7 @@
 				1ACED8FB25A21AAA0014D254 /* WebView.swift */,
 				1A9AB08925AEDBEF00576D5F /* settingsView.swift */,
 				1ACED8EA25A217EC0014D254 /* ContentView.swift */,
-				1A9AB05525A88DB300576D5F /* webtoonCard.swift */,
-				1A9AB09725B9BF2200576D5F /* naverWebtoon.swift */,
-				1A9AB09D25B9C53700576D5F /* daumWebtoon.swift */,
+				1A9AB09725B9BF2200576D5F /* myWebtoon.swift */,
 			);
 			path = WebtoonAssistant;
 			sourceTree = "<group>";
@@ -225,13 +219,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A9AB09825B9BF2200576D5F /* naverWebtoon.swift in Sources */,
+				1A9AB09825B9BF2200576D5F /* myWebtoon.swift in Sources */,
 				1ACED8EB25A217EC0014D254 /* ContentView.swift in Sources */,
 				1ACED8FC25A21AAA0014D254 /* WebView.swift in Sources */,
 				1A9AB08A25AEDBEF00576D5F /* settingsView.swift in Sources */,
 				1ACED8E925A217EC0014D254 /* WebtoonAssistantApp.swift in Sources */,
-				1A9AB09E25B9C53700576D5F /* daumWebtoon.swift in Sources */,
-				1A9AB05625A88DB300576D5F /* webtoonCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
