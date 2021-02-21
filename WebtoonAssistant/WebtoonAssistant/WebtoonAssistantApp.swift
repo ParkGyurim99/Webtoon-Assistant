@@ -6,19 +6,15 @@
 //
 
 import SwiftUI
-import Firebase
 
 @main
 struct WebtoonAssistantApp: App {
-    
-    init() {
-        FirebaseApp.configure()
-    }
+    let persistenceController = PersistenceController.shared
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-            //myWebtoon()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

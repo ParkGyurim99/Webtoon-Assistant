@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct ContentView : View {
     @State var weekday = "mon" // default value == 월, monday
     @State var showAdd : Bool = false

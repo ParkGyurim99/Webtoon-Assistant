@@ -8,12 +8,12 @@
 import SwiftUI
 import SwiftSoup
 
-struct Webtoon : Hashable {
-    var name : String
-    var uploadedDay : String
-    var url : String
-    var bookmarked : Bool
-}
+//struct Webtoon : Hashable {
+//    var name : String
+//    var uploadedDay : String
+//    var url : String
+//    var bookmarked : Bool
+//}
 
 struct webtoonInfo {
     var imageSource : String // 이미지 소스 url

@@ -7,19 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A242FC325BAA3C7007FCFCA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A242FC225BAA3C7007FCFCA /* GoogleService-Info.plist */; };
+		01082D5C8EBCDEDAFFC99E09 /* Pods_WebtoonAssistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C57A2070A5AD6D11F8C12B2 /* Pods_WebtoonAssistant.framework */; };
+		1A4D773725E23AC900BD0496 /* Webtoon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A4D773525E23AC900BD0496 /* Webtoon.xcdatamodeld */; };
+		1A4D773A25E23B0C00BD0496 /* Webtoon+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4D773925E23B0C00BD0496 /* Webtoon+CoreDataClass.swift */; };
+		1A4D773D25E23B1A00BD0496 /* Webtoon+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4D773C25E23B1A00BD0496 /* Webtoon+CoreDataProperties.swift */; };
+		1A4D774025E23BAA00BD0496 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4D773F25E23BAA00BD0496 /* Persistence.swift */; };
 		1A9AB08A25AEDBEF00576D5F /* settingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB08925AEDBEF00576D5F /* settingsView.swift */; };
 		1A9AB09825B9BF2200576D5F /* myWebtoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AB09725B9BF2200576D5F /* myWebtoon.swift */; };
 		1ACED8E925A217EC0014D254 /* WebtoonAssistantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACED8E825A217EC0014D254 /* WebtoonAssistantApp.swift */; };
 		1ACED8EB25A217EC0014D254 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACED8EA25A217EC0014D254 /* ContentView.swift */; };
-		1ACED8ED25A217EE0014D254 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ACED8EC25A217EE0014D254 /* Assets.xcassets */; };
-		1ACED8F025A217EE0014D254 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ACED8EF25A217EE0014D254 /* Preview Assets.xcassets */; };
 		1ACED8FC25A21AAA0014D254 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACED8FB25A21AAA0014D254 /* WebView.swift */; };
-		A3A2480B6E042CAB90C526D3 /* Pods_WebtoonAssistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6ACCEB297D9CAFE98C7FA26 /* Pods_WebtoonAssistant.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1A242FC225BAA3C7007FCFCA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1A4D773625E23AC900BD0496 /* Webtoon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Webtoon.xcdatamodel; sourceTree = "<group>"; };
+		1A4D773925E23B0C00BD0496 /* Webtoon+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Webtoon+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1A4D773C25E23B1A00BD0496 /* Webtoon+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Webtoon+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1A4D773F25E23BAA00BD0496 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		1A9AB08925AEDBEF00576D5F /* settingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsView.swift; sourceTree = "<group>"; };
 		1A9AB09725B9BF2200576D5F /* myWebtoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myWebtoon.swift; sourceTree = "<group>"; };
 		1ACED8E525A217EC0014D254 /* WebtoonAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebtoonAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,9 +33,9 @@
 		1ACED8EF25A217EE0014D254 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1ACED8F125A217EE0014D254 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1ACED8FB25A21AAA0014D254 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
-		5C2D83CEDEC55F8C597AFB17 /* Pods-WebtoonAssistant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebtoonAssistant.debug.xcconfig"; path = "Target Support Files/Pods-WebtoonAssistant/Pods-WebtoonAssistant.debug.xcconfig"; sourceTree = "<group>"; };
-		BD6B30507A98EA5D9D867DD8 /* Pods-WebtoonAssistant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebtoonAssistant.release.xcconfig"; path = "Target Support Files/Pods-WebtoonAssistant/Pods-WebtoonAssistant.release.xcconfig"; sourceTree = "<group>"; };
-		C6ACCEB297D9CAFE98C7FA26 /* Pods_WebtoonAssistant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebtoonAssistant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C57A2070A5AD6D11F8C12B2 /* Pods_WebtoonAssistant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebtoonAssistant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B21965DCF76FBB0BA6EC2461 /* Pods-WebtoonAssistant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebtoonAssistant.release.xcconfig"; path = "Target Support Files/Pods-WebtoonAssistant/Pods-WebtoonAssistant.release.xcconfig"; sourceTree = "<group>"; };
+		D6488293C791C1A599B02705 /* Pods-WebtoonAssistant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebtoonAssistant.debug.xcconfig"; path = "Target Support Files/Pods-WebtoonAssistant/Pods-WebtoonAssistant.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3A2480B6E042CAB90C526D3 /* Pods_WebtoonAssistant.framework in Frameworks */,
+				01082D5C8EBCDEDAFFC99E09 /* Pods_WebtoonAssistant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,10 +53,12 @@
 		1ACED8DC25A217EC0014D254 = {
 			isa = PBXGroup;
 			children = (
+				1A4D773925E23B0C00BD0496 /* Webtoon+CoreDataClass.swift */,
+				1A4D773C25E23B1A00BD0496 /* Webtoon+CoreDataProperties.swift */,
 				1ACED8E725A217EC0014D254 /* WebtoonAssistant */,
 				1ACED8E625A217EC0014D254 /* Products */,
-				E4399CDA2D6375455B132A2D /* Frameworks */,
-				73830AA221F0F67F5D054481 /* Pods */,
+				3E3748E71B39568BA27CA8E5 /* Pods */,
+				D1E7F7002E4085937E762719 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,12 +76,13 @@
 				1ACED8E825A217EC0014D254 /* WebtoonAssistantApp.swift */,
 				1ACED8EC25A217EE0014D254 /* Assets.xcassets */,
 				1ACED8F125A217EE0014D254 /* Info.plist */,
-				1A242FC225BAA3C7007FCFCA /* GoogleService-Info.plist */,
 				1ACED8EE25A217EE0014D254 /* Preview Content */,
 				1ACED8FB25A21AAA0014D254 /* WebView.swift */,
 				1A9AB08925AEDBEF00576D5F /* settingsView.swift */,
 				1ACED8EA25A217EC0014D254 /* ContentView.swift */,
 				1A9AB09725B9BF2200576D5F /* myWebtoon.swift */,
+				1A4D773F25E23BAA00BD0496 /* Persistence.swift */,
+				1A4D773525E23AC900BD0496 /* Webtoon.xcdatamodeld */,
 			);
 			path = WebtoonAssistant;
 			sourceTree = "<group>";
@@ -88,19 +95,19 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		73830AA221F0F67F5D054481 /* Pods */ = {
+		3E3748E71B39568BA27CA8E5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5C2D83CEDEC55F8C597AFB17 /* Pods-WebtoonAssistant.debug.xcconfig */,
-				BD6B30507A98EA5D9D867DD8 /* Pods-WebtoonAssistant.release.xcconfig */,
+				D6488293C791C1A599B02705 /* Pods-WebtoonAssistant.debug.xcconfig */,
+				B21965DCF76FBB0BA6EC2461 /* Pods-WebtoonAssistant.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		E4399CDA2D6375455B132A2D /* Frameworks */ = {
+		D1E7F7002E4085937E762719 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C6ACCEB297D9CAFE98C7FA26 /* Pods_WebtoonAssistant.framework */,
+				8C57A2070A5AD6D11F8C12B2 /* Pods_WebtoonAssistant.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,11 +119,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1ACED8F425A217EE0014D254 /* Build configuration list for PBXNativeTarget "WebtoonAssistant" */;
 			buildPhases = (
-				36CA2D5A785C0F5E3F5CF738 /* [CP] Check Pods Manifest.lock */,
+				CB142541A8A513A605FFBB8A /* [CP] Check Pods Manifest.lock */,
 				1ACED8E125A217EC0014D254 /* Sources */,
 				1ACED8E225A217EC0014D254 /* Frameworks */,
-				1ACED8E325A217EC0014D254 /* Resources */,
-				7A4AB2126EA41AA1040A4F19 /* [CP] Embed Pods Frameworks */,
+				27D6E8A47129B92CCF521A43 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,21 +165,25 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		1ACED8E325A217EC0014D254 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* Begin PBXShellScriptBuildPhase section */
+		27D6E8A47129B92CCF521A43 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ACED8F025A217EE0014D254 /* Preview Assets.xcassets in Resources */,
-				1ACED8ED25A217EE0014D254 /* Assets.xcassets in Resources */,
-				1A242FC325BAA3C7007FCFCA /* GoogleService-Info.plist in Resources */,
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WebtoonAssistant/Pods-WebtoonAssistant-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WebtoonAssistant/Pods-WebtoonAssistant-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebtoonAssistant/Pods-WebtoonAssistant-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		36CA2D5A785C0F5E3F5CF738 /* [CP] Check Pods Manifest.lock */ = {
+		CB142541A8A513A605FFBB8A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -195,23 +205,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7A4AB2126EA41AA1040A4F19 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WebtoonAssistant/Pods-WebtoonAssistant-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WebtoonAssistant/Pods-WebtoonAssistant-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebtoonAssistant/Pods-WebtoonAssistant-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -219,10 +212,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A4D774025E23BAA00BD0496 /* Persistence.swift in Sources */,
+				1A4D773D25E23B1A00BD0496 /* Webtoon+CoreDataProperties.swift in Sources */,
+				1A4D773A25E23B0C00BD0496 /* Webtoon+CoreDataClass.swift in Sources */,
 				1A9AB09825B9BF2200576D5F /* myWebtoon.swift in Sources */,
 				1ACED8EB25A217EC0014D254 /* ContentView.swift in Sources */,
 				1ACED8FC25A21AAA0014D254 /* WebView.swift in Sources */,
 				1A9AB08A25AEDBEF00576D5F /* settingsView.swift in Sources */,
+				1A4D773725E23AC900BD0496 /* Webtoon.xcdatamodeld in Sources */,
 				1ACED8E925A217EC0014D254 /* WebtoonAssistantApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,7 +345,7 @@
 		};
 		1ACED8F525A217EE0014D254 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C2D83CEDEC55F8C597AFB17 /* Pods-WebtoonAssistant.debug.xcconfig */;
+			baseConfigurationReference = D6488293C791C1A599B02705 /* Pods-WebtoonAssistant.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -371,7 +368,7 @@
 		};
 		1ACED8F625A217EE0014D254 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD6B30507A98EA5D9D867DD8 /* Pods-WebtoonAssistant.release.xcconfig */;
+			baseConfigurationReference = B21965DCF76FBB0BA6EC2461 /* Pods-WebtoonAssistant.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -414,6 +411,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1A4D773525E23AC900BD0496 /* Webtoon.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1A4D773625E23AC900BD0496 /* Webtoon.xcdatamodel */,
+			);
+			currentVersion = 1A4D773625E23AC900BD0496 /* Webtoon.xcdatamodel */;
+			path = Webtoon.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1ACED8DD25A217EC0014D254 /* Project object */;
 }
