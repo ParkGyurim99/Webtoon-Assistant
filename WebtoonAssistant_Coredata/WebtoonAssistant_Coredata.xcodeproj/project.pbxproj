@@ -15,6 +15,11 @@
 		1AB2754225E4DD7F0013D046 /* WebtoonAssistant_Coredata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1AB2754025E4DD7F0013D046 /* WebtoonAssistant_Coredata.xcdatamodeld */; };
 		1AB2754C25E4E0620013D046 /* Webtoon+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB2754A25E4E0620013D046 /* Webtoon+CoreDataClass.swift */; };
 		1AB2754D25E4E0620013D046 /* Webtoon+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB2754B25E4E0620013D046 /* Webtoon+CoreDataProperties.swift */; };
+		1AB2755125E4E2400013D046 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB2755025E4E2400013D046 /* SettingsView.swift */; };
+		1AB2755425E4E3380013D046 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB2755325E4E3380013D046 /* WebView.swift */; };
+		1AB2755725E4E3CF0013D046 /* AddBookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB2755625E4E3CF0013D046 /* AddBookmarkView.swift */; };
+		1AB2755B25E4E5440013D046 /* WebtoonInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB2755A25E4E5440013D046 /* WebtoonInformation.swift */; };
+		832A5AD45A4EE4C7B3CB8C10 /* Pods_WebtoonAssistant_Coredata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8376484B665A87303060F34 /* Pods_WebtoonAssistant_Coredata.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,13 @@
 		1AB2754325E4DD7F0013D046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AB2754A25E4E0620013D046 /* Webtoon+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Webtoon+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1AB2754B25E4E0620013D046 /* Webtoon+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Webtoon+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1AB2755025E4E2400013D046 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		1AB2755325E4E3380013D046 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		1AB2755625E4E3CF0013D046 /* AddBookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookmarkView.swift; sourceTree = "<group>"; };
+		1AB2755A25E4E5440013D046 /* WebtoonInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebtoonInformation.swift; sourceTree = "<group>"; };
+		99AC8CE795E3650128832DA0 /* Pods-WebtoonAssistant_Coredata.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebtoonAssistant_Coredata.debug.xcconfig"; path = "Target Support Files/Pods-WebtoonAssistant_Coredata/Pods-WebtoonAssistant_Coredata.debug.xcconfig"; sourceTree = "<group>"; };
+		A8376484B665A87303060F34 /* Pods_WebtoonAssistant_Coredata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebtoonAssistant_Coredata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA79577470AF36F4CE413E3F /* Pods-WebtoonAssistant_Coredata.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebtoonAssistant_Coredata.release.xcconfig"; path = "Target Support Files/Pods-WebtoonAssistant_Coredata/Pods-WebtoonAssistant_Coredata.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,12 +47,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832A5AD45A4EE4C7B3CB8C10 /* Pods_WebtoonAssistant_Coredata.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1215CE638B49E23B35D4861A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8376484B665A87303060F34 /* Pods_WebtoonAssistant_Coredata.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1AB2752925E4DD7C0013D046 = {
 			isa = PBXGroup;
 			children = (
@@ -48,6 +69,8 @@
 				1AB2754B25E4E0620013D046 /* Webtoon+CoreDataProperties.swift */,
 				1AB2753425E4DD7C0013D046 /* WebtoonAssistant_Coredata */,
 				1AB2753325E4DD7C0013D046 /* Products */,
+				F6A22B5229295AC4E66E59C0 /* Pods */,
+				1215CE638B49E23B35D4861A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,13 +85,17 @@
 		1AB2753425E4DD7C0013D046 /* WebtoonAssistant_Coredata */ = {
 			isa = PBXGroup;
 			children = (
+				1AB2754325E4DD7F0013D046 /* Info.plist */,
+				1AB2753B25E4DD7F0013D046 /* Preview Content */,
+				1AB2753925E4DD7F0013D046 /* Assets.xcassets */,
 				1AB2753525E4DD7C0013D046 /* WebtoonAssistant_CoredataApp.swift */,
 				1AB2753725E4DD7C0013D046 /* ContentView.swift */,
-				1AB2753925E4DD7F0013D046 /* Assets.xcassets */,
+				1AB2755625E4E3CF0013D046 /* AddBookmarkView.swift */,
+				1AB2755A25E4E5440013D046 /* WebtoonInformation.swift */,
+				1AB2755025E4E2400013D046 /* SettingsView.swift */,
+				1AB2755325E4E3380013D046 /* WebView.swift */,
 				1AB2753E25E4DD7F0013D046 /* Persistence.swift */,
-				1AB2754325E4DD7F0013D046 /* Info.plist */,
 				1AB2754025E4DD7F0013D046 /* WebtoonAssistant_Coredata.xcdatamodeld */,
-				1AB2753B25E4DD7F0013D046 /* Preview Content */,
 			);
 			path = WebtoonAssistant_Coredata;
 			sourceTree = "<group>";
@@ -81,6 +108,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F6A22B5229295AC4E66E59C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				99AC8CE795E3650128832DA0 /* Pods-WebtoonAssistant_Coredata.debug.xcconfig */,
+				DA79577470AF36F4CE413E3F /* Pods-WebtoonAssistant_Coredata.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -88,9 +125,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1AB2754625E4DD7F0013D046 /* Build configuration list for PBXNativeTarget "WebtoonAssistant_Coredata" */;
 			buildPhases = (
+				CE54BE48D3DA12693C272B28 /* [CP] Check Pods Manifest.lock */,
 				1AB2752E25E4DD7C0013D046 /* Sources */,
 				1AB2752F25E4DD7C0013D046 /* Frameworks */,
 				1AB2753025E4DD7C0013D046 /* Resources */,
+				788784DCD9865F94892A0C36 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -145,12 +184,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		788784DCD9865F94892A0C36 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WebtoonAssistant_Coredata/Pods-WebtoonAssistant_Coredata-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WebtoonAssistant_Coredata/Pods-WebtoonAssistant_Coredata-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebtoonAssistant_Coredata/Pods-WebtoonAssistant_Coredata-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE54BE48D3DA12693C272B28 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WebtoonAssistant_Coredata-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1AB2752E25E4DD7C0013D046 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AB2755125E4E2400013D046 /* SettingsView.swift in Sources */,
+				1AB2755425E4E3380013D046 /* WebView.swift in Sources */,
 				1AB2754225E4DD7F0013D046 /* WebtoonAssistant_Coredata.xcdatamodeld in Sources */,
+				1AB2755B25E4E5440013D046 /* WebtoonInformation.swift in Sources */,
+				1AB2755725E4E3CF0013D046 /* AddBookmarkView.swift in Sources */,
 				1AB2754C25E4E0620013D046 /* Webtoon+CoreDataClass.swift in Sources */,
 				1AB2754D25E4E0620013D046 /* Webtoon+CoreDataProperties.swift in Sources */,
 				1AB2753F25E4DD7F0013D046 /* Persistence.swift in Sources */,
@@ -280,6 +365,7 @@
 		};
 		1AB2754725E4DD7F0013D046 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99AC8CE795E3650128832DA0 /* Pods-WebtoonAssistant_Coredata.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +387,7 @@
 		};
 		1AB2754825E4DD7F0013D046 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA79577470AF36F4CE413E3F /* Pods-WebtoonAssistant_Coredata.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

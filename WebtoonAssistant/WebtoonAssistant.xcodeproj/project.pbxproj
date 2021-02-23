@@ -67,9 +67,9 @@
 				1ACED8EC25A217EE0014D254 /* Assets.xcassets */,
 				1ACED8F125A217EE0014D254 /* Info.plist */,
 				1ACED8EE25A217EE0014D254 /* Preview Content */,
-				1ACED8FB25A21AAA0014D254 /* WebView.swift */,
-				1A9AB08925AEDBEF00576D5F /* SettingsView.swift */,
 				1ACED8EA25A217EC0014D254 /* ContentView.swift */,
+				1A9AB08925AEDBEF00576D5F /* SettingsView.swift */,
+				1ACED8FB25A21AAA0014D254 /* WebView.swift */,
 				1A9AB09725B9BF2200576D5F /* myWebtoon.swift */,
 			);
 			path = WebtoonAssistant;
