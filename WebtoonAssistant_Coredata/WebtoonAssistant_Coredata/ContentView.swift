@@ -36,7 +36,7 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(entity : Webtoon.entity(), sortDescriptors: [])
 //    @FetchRequest(entity: Webtoon.entity(), sortDescriptors: [], predicate: NSPredicate(format: "status != %@", Status.completed.rawValue))
-    public var Webtoons: FetchedResults<Webtoon>
+    var Webtoons: FetchedResults<Webtoon>
     
     var body: some View {
         NavigationView {
@@ -62,8 +62,7 @@ struct ContentView: View {
                     List {
                         ForEach(Webtoons) { Webtoon in
                             if Webtoon.uploadedDay == weekday {
-                                //webtoonCard(Webtoon: )
-                                Text("\(Webtoon.name!)")
+                                webtoonCard(WebtoonName: Webtoon.name!, WebtoonUrl: Webtoon.url!)
                             }
                         }
                         .onDelete { indexSet in // coredata 삭제하기
@@ -104,7 +103,7 @@ struct ContentView: View {
                 }
             )
             .sheet(isPresented: $showAdd, content: {
-                AddBookmarkView(isPresented: $showAdd)
+                AddBookmarkView(isPresented: $showAdd, selectedWeekday: $weekday)
             })
         }
     }

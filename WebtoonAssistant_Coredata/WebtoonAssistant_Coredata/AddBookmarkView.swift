@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct AddBookmarkView : View {
-    @State var selectedWeekday : String = "mon"
+    //@State var selectedWeekday : String = "mon"
+    @Binding var selectedWeekday : String
     @Binding var isPresented : Bool
 
-    init(isPresented : Binding<Bool>) {
+    init(isPresented : Binding<Bool>, selectedWeekday : Binding<String>) {
         _isPresented = isPresented
+        _selectedWeekday = selectedWeekday
     }
     
     var body: some View {

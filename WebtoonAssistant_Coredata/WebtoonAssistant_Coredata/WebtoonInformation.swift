@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftSoup
 
+// Core data 에 저장되지 않은 웹툰
 struct WebtoonNotStored : Hashable {
     var name : String
     var uploadedDay : String
@@ -64,6 +65,7 @@ func getWebtoonInfo(urlAddress : String)-> webtoonInfo {
     return information
 }
 
+// 요일별 웹툰 받아오기
 func getWebtoons(weekday : String) -> [WebtoonNotStored] {
     var returnWebtoon : [WebtoonNotStored] = []
     var temp : WebtoonNotStored = WebtoonNotStored(name: "", uploadedDay: "", url: "", bookmarked: false)
@@ -133,45 +135,33 @@ func getWebtoons(weekday : String) -> [WebtoonNotStored] {
     return returnWebtoon
 }
 
-//func isBookmarked(name : String) -> Bool {
-////    @Environment(\.managedObjectContext) private var viewContext
-////    @FetchRequest(entity : Webtoon.entity(), sortDescriptors: [])
-////    var Webtoons: FetchedResults<Webtoon>
-//    
-//    for i in 0..<Webtoons.count {
-//        if name == Webtoons[i].name {
-//            return true
-//        }
-//    }
-//    return false
-//}
-
-
 struct webtoonCard : View {
-    var Webtoon : WebtoonNotStored
+    var WebtoonName : String
+    var WebtoonUrl : String
     var webtoonInformation : webtoonInfo // include image information
     
     // initializing variable
-    init(Webtoon : WebtoonNotStored) {
-        self.Webtoon = Webtoon
-        webtoonInformation = getWebtoonInfo(urlAddress: Webtoon.url)
+    init(WebtoonName : String, WebtoonUrl : String) {
+        self.WebtoonName = WebtoonName
+        self.WebtoonUrl = WebtoonUrl
+        webtoonInformation = getWebtoonInfo(urlAddress: WebtoonUrl)
     }
     var body: some View {
-        NavigationLink(destination: WebView(urlToLoad : Webtoon.url),
+        NavigationLink(destination: WebView(urlToLoad : WebtoonUrl),
             label: {
                 HStack {
                     WebView(urlToLoad: webtoonInformation.imageSource)
                         .frame(width : 100, height: 80) // thumbnail
                     VStack (alignment : .leading) {
-                        Text(Webtoon.name)
+                        Text(WebtoonName)
                             .fontWeight(.bold)
                         Text(webtoonInformation.recentUpload + "\n" + webtoonInformation.recentEpisode)
                             .font(.system(size : 15))
                             .foregroundColor(.secondary)
                     } // VStack
                     Spacer()
-                    Image(systemName: "heart.fill")
-                        .foregroundColor(Webtoon.bookmarked ? Color.red : Color.gray)
+//                    Image(systemName: "heart.fill")
+//                        .foregroundColor(Webtoon.bookmarked ? Color.red : Color.gray)
                 } // HStack
             }
         ) // Navigation Link
@@ -179,25 +169,33 @@ struct webtoonCard : View {
     }
 }
 
+func duplicateCheck(Webtoons : FetchedResults<Webtoon>, checkWebtoonName : String) -> Bool {
+    for i in 0..<Webtoons.count {
+        if checkWebtoonName == Webtoons[i].name {
+            return true
+        }
+    }
+    return false
+}
+
 struct webtoonCardBookmark : View {
     @State var isClicked : Bool = false
     @State var isBookmarked : Int = 0 // 0 : Clicked new Webtoon, 1 : Clicked existed Webtoon
     @Environment(\.managedObjectContext) private var viewContext
     @Environment (\.presentationMode) var presentationMode
-    
     @FetchRequest(entity : Webtoon.entity(), sortDescriptors: [])
-    public var Webtoons: FetchedResults<Webtoon>
+    var Webtoons : FetchedResults<Webtoon>
     
     var SelectedWebtoon : WebtoonNotStored
     var webtoonInformation : webtoonInfo // include image information
     @State var alertMessage : String = "북마크에 추가되었습니다."
-    
+
     // initializing variable
     init(Webtoon : WebtoonNotStored) {
         self.SelectedWebtoon = Webtoon
         webtoonInformation = getWebtoonInfo(urlAddress: Webtoon.url)
     }
-    
+
     var body: some View {
         HStack {
             WebView(urlToLoad: webtoonInformation.imageSource)
@@ -210,7 +208,7 @@ struct webtoonCardBookmark : View {
                 isClicked = true
                 
                 for i in 0..<Webtoons.count {
-                    if Webtoons[i].name == SelectedWebtoon.name {
+                    if SelectedWebtoon.name == Webtoons[i].name {
                         isBookmarked = 1
                         alertMessage = "이미 추가된 웹툰입니다."
                     }
@@ -233,9 +231,7 @@ struct webtoonCardBookmark : View {
                 }
             }) {
                 Image(systemName: "heart.fill")
-                    //.foregroundColor(isClicked ? Color.red : Color.gray)
-                    ////.foregroundColor(isBookmarked(name: Webtoon.name) ? Color.red : Color.gray)
-                    .foregroundColor(isBookmarked == 1 ? Color.red : Color.gray)
+                    .foregroundColor(duplicateCheck(Webtoons: Webtoons, checkWebtoonName: SelectedWebtoon.name) ? Color.red : Color.gray)
                     .font(.system(size : 30))
             }.alert(isPresented: $isClicked, content: {
                 Alert(title: Text("북마크에 추가"), message: Text(alertMessage), dismissButton: .default(Text("확인")))
