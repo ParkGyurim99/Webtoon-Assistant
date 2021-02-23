@@ -59,7 +59,7 @@ struct ContentView : View {
             } // ZStack
             .navigationTitle("내가 보는 웹툰")
             .navigationBarItems(trailing:
-                NavigationLink(destination : settingsView()) {
+                NavigationLink(destination : SettingsView()) {
                     Image(systemName : "gearshape.2.fill")
                         .font(.system(size : 25))
                         .foregroundColor(.black)

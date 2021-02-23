@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct settingsView : View {
+struct SettingsView : View {
     var body: some View {
         Text("settings")
             .navigationBarTitle("설정")
