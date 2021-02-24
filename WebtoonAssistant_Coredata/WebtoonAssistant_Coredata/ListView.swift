@@ -8,32 +8,26 @@
 import SwiftUI
 
 struct ListView : View {
-    @Binding var isPresented : Bool
+    @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(entity : Webtoon.entity(), sortDescriptors: [])
     var Webtoons: FetchedResults<Webtoon>
     
-    init(isPresented : Binding<Bool>) {
-        _isPresented = isPresented
-    }
-    
     var body: some View {
-        VStack {
-            HStack {
-                Text("북마크 모아보기")
-                    .font(.largeTitle)
-                    .bold()
-                Spacer()
-                Button {
-                    isPresented.toggle()
-                } label : {
-                    Image(systemName : "xmark")
-                        .foregroundColor(.black)
-                        .font(.system(size : 25))
-                }
+        Text("북마크 모아보기")
+            .font(.largeTitle)
+            .bold()
+        List {
+            ForEach(Webtoons, id : \.self) { Webtoon in
+                webtoonCard(WebtoonName: Webtoon.name!, WebtoonUrl: Webtoon.url!)
             }
-            List {
-                ForEach(Webtoons, id : \.self) { Webtoon in
-                    webtoonCard(WebtoonName: Webtoon.name!, WebtoonUrl: Webtoon.url!)
+            .onDelete { indexSet in
+                for index in indexSet {
+                    viewContext.delete(Webtoons[index])
+                }
+                do {
+                    try viewContext.save()
+                } catch {
+                    print(error.localizedDescription)
                 }
             }
         }

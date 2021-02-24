@@ -9,7 +9,15 @@ import SwiftUI
 
 struct SettingsView : View {
     var body: some View {
-        Text("settings")
-            .navigationBarTitle("설정")
+        VStack {
+            Spacer()
+                .frame(height : 20)
+            List {
+                NavigationLink(destination: ListView(), label: {
+                    Text("북마크 모아보기")
+                        .bold()
+                })
+            }
+        }.navigationTitle(Text("설정"))
     }
 }
