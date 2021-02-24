@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -114,7 +114,6 @@
 				99AC8CE795E3650128832DA0 /* Pods-WebtoonAssistant_Coredata.debug.xcconfig */,
 				DA79577470AF36F4CE413E3F /* Pods-WebtoonAssistant_Coredata.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -371,6 +370,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"WebtoonAssistant_Coredata/Preview Content\"";
+				DEVELOPMENT_TEAM = ZKRH5N6RGG;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = WebtoonAssistant_Coredata/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -393,6 +393,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"WebtoonAssistant_Coredata/Preview Content\"";
+				DEVELOPMENT_TEAM = ZKRH5N6RGG;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = WebtoonAssistant_Coredata/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

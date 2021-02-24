@@ -135,6 +135,16 @@ func getWebtoons(weekday : String) -> [WebtoonNotStored] {
     return returnWebtoon
 }
 
+// url to Image
+extension Image {
+    func data(url:URL) -> Self {
+        if let data = try? Data(contentsOf: url) {
+            return Image(uiImage: UIImage(data: data)!).resizable()
+        }
+    return self.resizable()
+    }
+}
+
 struct webtoonCard : View {
     var WebtoonName : String
     var WebtoonUrl : String
@@ -150,8 +160,11 @@ struct webtoonCard : View {
         NavigationLink(destination: WebView(urlToLoad : WebtoonUrl),
             label: {
                 HStack {
-                    WebView(urlToLoad: webtoonInformation.imageSource)
-                        .frame(width : 100, height: 80) // thumbnail
+//                    WebView(urlToLoad: webtoonInformation.imageSource)
+//                        .frame(width : 100, height: 80) // thumbnail
+                    Image(systemName : "person.fill")
+                        .data(url: URL(string : webtoonInformation.imageSource)!)
+                        .frame(width : 100, height: 80)
                     VStack (alignment : .leading) {
                         Text(WebtoonName)
                             .fontWeight(.bold)
@@ -198,8 +211,11 @@ struct webtoonCardBookmark : View {
 
     var body: some View {
         HStack {
-            WebView(urlToLoad: webtoonInformation.imageSource)
-                .frame(width : 100, height: 80) // thumbnail
+//            WebView(urlToLoad: webtoonInformation.imageSource)
+//                .frame(width : 100, height: 80) // thumbnail
+            Image(systemName : "person.fill")
+                .data(url: URL(string : webtoonInformation.imageSource)!)
+                .frame(width : 100, height: 80)
             Text(SelectedWebtoon.name)
                 .fontWeight(.bold)
             Spacer()
