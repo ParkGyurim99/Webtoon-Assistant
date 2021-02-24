@@ -15,6 +15,7 @@ struct AddBookmarkView : View {
     init(isPresented : Binding<Bool>, selectedWeekday : Binding<String>) {
         _isPresented = isPresented
         _selectedWeekday = selectedWeekday
+        print("add clicked")
     }
     
     var body: some View {

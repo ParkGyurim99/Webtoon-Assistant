@@ -32,7 +32,8 @@ func weekdayToKor(weekday : String) -> String {
 struct ContentView: View {
     @State var weekday = "mon" // default value == 월, monday
     @State var showAdd : Bool = false
-    
+    @State var showList : Bool = false
+
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(entity : Webtoon.entity(), sortDescriptors: [])
 //    @FetchRequest(entity: Webtoon.entity(), sortDescriptors: [], predicate: NSPredicate(format: "status != %@", Status.completed.rawValue))
@@ -78,25 +79,41 @@ struct ContentView: View {
                     }.listStyle(PlainListStyle())
                 } // VStack
                 
-                // Add Bookmark
-                Button(action: {
-                    withAnimation {
-                        showAdd = true
-                    }
-                }, label: {
-                    Image(systemName: "plus")
-                        .font(.system(size : 30))
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(Color.yellow)
-                        .clipShape(Circle())
-                        .padding(.trailing, 20)
-                        .padding(.bottom, UIApplication.shared.windows.first?.safeAreaInsets.bottom == 0 ? 20 : 0) // 구형 아이폰에서 버튼에 패딩주기
-                })
+                VStack {
+                    // 모아보기
+                    Button(action: {
+                        withAnimation {
+                            showList = true
+                        }
+                    }, label: {
+                        Image(systemName: "list.bullet")
+                            .font(.system(size : 30))
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color.yellow)
+                            .clipShape(Circle())
+                            .padding(.trailing, 20)
+                    })
+                    
+                    // Add Bookmark
+                    Button(action: {
+                        withAnimation {
+                            showAdd = true
+                        }
+                    }, label: {
+                        Image(systemName: "plus")
+                            .font(.system(size : 30))
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color.yellow)
+                            .clipShape(Circle())
+                            .padding(.trailing, 20)
+                            .padding(.bottom, UIApplication.shared.windows.first?.safeAreaInsets.bottom == 0 ? 20 : 0) // 구형 아이폰에서 버튼에 패딩주기
+                    })
+                }
             } // ZStack
             .navigationTitle("내가 보는 웹툰")
-            .navigationBarItems(trailing:
-                NavigationLink(destination : SettingsView()) {
+            .navigationBarItems(trailing: NavigationLink(destination : SettingsView()) {
                     Image(systemName : "gearshape.2.fill")
                         .font(.system(size : 25))
                         .foregroundColor(.black)
@@ -104,6 +121,9 @@ struct ContentView: View {
             )
             .sheet(isPresented: $showAdd, content: {
                 AddBookmarkView(isPresented: $showAdd, selectedWeekday: $weekday)
+            })
+            .sheet(isPresented: $showList, content: {
+                ListView(isPresented : $showList)
             })
         }
     }

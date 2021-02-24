@@ -173,12 +173,12 @@ struct webtoonCard : View {
                             .foregroundColor(.secondary)
                     } // VStack
                     Spacer()
-//                    Image(systemName: "heart.fill")
-//                        .foregroundColor(Webtoon.bookmarked ? Color.red : Color.gray)
+                    Image(systemName: "heart.fill")
+                        .foregroundColor(Color.red)
                 } // HStack
             }
         ) // Navigation Link
-        
+       
     }
 }
 
