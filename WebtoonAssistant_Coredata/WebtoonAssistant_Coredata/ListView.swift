@@ -13,9 +13,9 @@ struct ListView : View {
     var Webtoons: FetchedResults<Webtoon>
     
     var body: some View {
-        Text("북마크 모아보기")
-            .font(.largeTitle)
-            .bold()
+//        Text("북마크 모아보기")
+//            .font(.largeTitle)
+//            .bold()
         List {
             ForEach(Webtoons, id : \.self) { Webtoon in
                 webtoonCard(WebtoonName: Webtoon.name!, WebtoonUrl: Webtoon.url!)
@@ -30,6 +30,6 @@ struct ListView : View {
                     print(error.localizedDescription)
                 }
             }
-        }
+        }.navigationTitle("북마크 모아보기")
     }
 }
