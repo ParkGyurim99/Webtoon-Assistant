@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A34C1D326BFCABD008B3A78 /* WebtoonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34C1D226BFCABD008B3A78 /* WebtoonViewModel.swift */; };
+		1A34C1D626BFCB1C008B3A78 /* ExtensionImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34C1D526BFCB1C008B3A78 /* ExtensionImage.swift */; };
+		1A34C1D826BFCC16008B3A78 /* WebtoonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34C1D726BFCC16008B3A78 /* WebtoonCardView.swift */; };
+		1A34C1DA26BFD116008B3A78 /* DayPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34C1D926BFD116008B3A78 /* DayPicker.swift */; };
 		1AB2753625E4DD7C0013D046 /* WebtoonAssistant_CoredataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB2753525E4DD7C0013D046 /* WebtoonAssistant_CoredataApp.swift */; };
 		1AB2753825E4DD7C0013D046 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB2753725E4DD7C0013D046 /* ContentView.swift */; };
 		1AB2753A25E4DD7F0013D046 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AB2753925E4DD7F0013D046 /* Assets.xcassets */; };
@@ -18,12 +22,16 @@
 		1AB2755125E4E2400013D046 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB2755025E4E2400013D046 /* SettingsView.swift */; };
 		1AB2755425E4E3380013D046 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB2755325E4E3380013D046 /* WebView.swift */; };
 		1AB2755725E4E3CF0013D046 /* AddBookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB2755625E4E3CF0013D046 /* AddBookmarkView.swift */; };
-		1AB2755B25E4E5440013D046 /* WebtoonInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB2755A25E4E5440013D046 /* WebtoonInformation.swift */; };
-		1AB5921E25E63A060087FDEB /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB5921D25E63A060087FDEB /* ListView.swift */; };
+		1AB2755B25E4E5440013D046 /* WebtoonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB2755A25E4E5440013D046 /* WebtoonModel.swift */; };
+		1AB5921E25E63A060087FDEB /* BookmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB5921D25E63A060087FDEB /* BookmarkListView.swift */; };
 		832A5AD45A4EE4C7B3CB8C10 /* Pods_WebtoonAssistant_Coredata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8376484B665A87303060F34 /* Pods_WebtoonAssistant_Coredata.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A34C1D226BFCABD008B3A78 /* WebtoonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebtoonViewModel.swift; sourceTree = "<group>"; };
+		1A34C1D526BFCB1C008B3A78 /* ExtensionImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionImage.swift; sourceTree = "<group>"; };
+		1A34C1D726BFCC16008B3A78 /* WebtoonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebtoonCardView.swift; sourceTree = "<group>"; };
+		1A34C1D926BFD116008B3A78 /* DayPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPicker.swift; sourceTree = "<group>"; };
 		1AB2753225E4DD7C0013D046 /* WebtoonAssistant_Coredata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebtoonAssistant_Coredata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AB2753525E4DD7C0013D046 /* WebtoonAssistant_CoredataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebtoonAssistant_CoredataApp.swift; sourceTree = "<group>"; };
 		1AB2753725E4DD7C0013D046 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,8 +45,8 @@
 		1AB2755025E4E2400013D046 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		1AB2755325E4E3380013D046 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		1AB2755625E4E3CF0013D046 /* AddBookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookmarkView.swift; sourceTree = "<group>"; };
-		1AB2755A25E4E5440013D046 /* WebtoonInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebtoonInformation.swift; sourceTree = "<group>"; };
-		1AB5921D25E63A060087FDEB /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		1AB2755A25E4E5440013D046 /* WebtoonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebtoonModel.swift; sourceTree = "<group>"; };
+		1AB5921D25E63A060087FDEB /* BookmarkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListView.swift; sourceTree = "<group>"; };
 		99AC8CE795E3650128832DA0 /* Pods-WebtoonAssistant_Coredata.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebtoonAssistant_Coredata.debug.xcconfig"; path = "Target Support Files/Pods-WebtoonAssistant_Coredata/Pods-WebtoonAssistant_Coredata.debug.xcconfig"; sourceTree = "<group>"; };
 		A8376484B665A87303060F34 /* Pods_WebtoonAssistant_Coredata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebtoonAssistant_Coredata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA79577470AF36F4CE413E3F /* Pods-WebtoonAssistant_Coredata.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebtoonAssistant_Coredata.release.xcconfig"; path = "Target Support Files/Pods-WebtoonAssistant_Coredata/Pods-WebtoonAssistant_Coredata.release.xcconfig"; sourceTree = "<group>"; };
@@ -64,6 +72,59 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1A34C1CE26BFCA0E008B3A78 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1A34C1DB26BFD247008B3A78 /* Components */,
+				1AB2753725E4DD7C0013D046 /* ContentView.swift */,
+				1AB5921D25E63A060087FDEB /* BookmarkListView.swift */,
+				1AB2755625E4E3CF0013D046 /* AddBookmarkView.swift */,
+				1AB2755025E4E2400013D046 /* SettingsView.swift */,
+				1A34C1D726BFCC16008B3A78 /* WebtoonCardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1A34C1CF26BFCA16008B3A78 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1A34C1D226BFCABD008B3A78 /* WebtoonViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1A34C1D026BFCA1D008B3A78 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1AB2755A25E4E5440013D046 /* WebtoonModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1A34C1D126BFCA23008B3A78 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1AB2755325E4E3380013D046 /* WebView.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1A34C1D426BFCB08008B3A78 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1A34C1D526BFCB1C008B3A78 /* ExtensionImage.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1A34C1DB26BFD247008B3A78 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1A34C1D926BFD116008B3A78 /* DayPicker.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		1AB2752925E4DD7C0013D046 = {
 			isa = PBXGroup;
 			children = (
@@ -87,16 +148,15 @@
 		1AB2753425E4DD7C0013D046 /* WebtoonAssistant_Coredata */ = {
 			isa = PBXGroup;
 			children = (
+				1A34C1D426BFCB08008B3A78 /* Extensions */,
+				1A34C1D126BFCA23008B3A78 /* Services */,
+				1A34C1D026BFCA1D008B3A78 /* Model */,
+				1A34C1CF26BFCA16008B3A78 /* ViewModel */,
+				1A34C1CE26BFCA0E008B3A78 /* View */,
 				1AB2754325E4DD7F0013D046 /* Info.plist */,
 				1AB2753B25E4DD7F0013D046 /* Preview Content */,
 				1AB2753925E4DD7F0013D046 /* Assets.xcassets */,
 				1AB2753525E4DD7C0013D046 /* WebtoonAssistant_CoredataApp.swift */,
-				1AB2753725E4DD7C0013D046 /* ContentView.swift */,
-				1AB2755625E4E3CF0013D046 /* AddBookmarkView.swift */,
-				1AB5921D25E63A060087FDEB /* ListView.swift */,
-				1AB2755A25E4E5440013D046 /* WebtoonInformation.swift */,
-				1AB2755025E4E2400013D046 /* SettingsView.swift */,
-				1AB2755325E4E3380013D046 /* WebView.swift */,
 				1AB2753E25E4DD7F0013D046 /* Persistence.swift */,
 				1AB2754025E4DD7F0013D046 /* WebtoonAssistant_Coredata.xcdatamodeld */,
 			);
@@ -234,16 +294,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AB2755125E4E2400013D046 /* SettingsView.swift in Sources */,
+				1A34C1D626BFCB1C008B3A78 /* ExtensionImage.swift in Sources */,
 				1AB2755425E4E3380013D046 /* WebView.swift in Sources */,
 				1AB2754225E4DD7F0013D046 /* WebtoonAssistant_Coredata.xcdatamodeld in Sources */,
-				1AB2755B25E4E5440013D046 /* WebtoonInformation.swift in Sources */,
+				1A34C1D326BFCABD008B3A78 /* WebtoonViewModel.swift in Sources */,
+				1AB2755B25E4E5440013D046 /* WebtoonModel.swift in Sources */,
 				1AB2755725E4E3CF0013D046 /* AddBookmarkView.swift in Sources */,
 				1AB2754C25E4E0620013D046 /* Webtoon+CoreDataClass.swift in Sources */,
 				1AB2754D25E4E0620013D046 /* Webtoon+CoreDataProperties.swift in Sources */,
 				1AB2753F25E4DD7F0013D046 /* Persistence.swift in Sources */,
-				1AB5921E25E63A060087FDEB /* ListView.swift in Sources */,
+				1AB5921E25E63A060087FDEB /* BookmarkListView.swift in Sources */,
 				1AB2753825E4DD7C0013D046 /* ContentView.swift in Sources */,
+				1A34C1DA26BFD116008B3A78 /* DayPicker.swift in Sources */,
 				1AB2753625E4DD7C0013D046 /* WebtoonAssistant_CoredataApp.swift in Sources */,
+				1A34C1D826BFCC16008B3A78 /* WebtoonCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

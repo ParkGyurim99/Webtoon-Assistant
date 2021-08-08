@@ -7,15 +7,12 @@
 
 import SwiftUI
 
-struct ListView : View {
+struct BookmarkListView : View {
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(entity : Webtoon.entity(), sortDescriptors: [])
     var Webtoons: FetchedResults<Webtoon>
     
     var body: some View {
-//        Text("북마크 모아보기")
-//            .font(.largeTitle)
-//            .bold()
         List {
             ForEach(Webtoons, id : \.self) { Webtoon in
                 webtoonCard(WebtoonName: Webtoon.name!, WebtoonUrl: Webtoon.url!)

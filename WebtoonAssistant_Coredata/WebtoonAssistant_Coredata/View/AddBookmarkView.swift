@@ -20,6 +20,7 @@ struct AddBookmarkView : View {
     
     var body: some View {
         VStack {
+            // Title
             HStack {
                 Text("북마크에 추가하기")
                     .font(.largeTitle)
@@ -36,24 +37,7 @@ struct AddBookmarkView : View {
             .padding(.horizontal, 20)
             .padding(.top, 20)
             
-            Picker("weekday", selection : $selectedWeekday) {
-                Text("월").tag("mon")
-                Text("화").tag("tue")
-                Text("수").tag("wed")
-                Text("목").tag("thu")
-                Text("금").tag("fri")
-                Text("토").tag("sat")
-                Text("일").tag("sun")
-            }
-            .pickerStyle(SegmentedPickerStyle())
-            .padding()
-            
-            Text(weekdayToKor(weekday : selectedWeekday) + "요웹툰")
-                .font(.headline)
-                .fontWeight(.black)
-                .frame(width : 300, height: 30)
-            //Spacer()
-            Divider()
+            DayPicker(selectedWeekday: $selectedWeekday)
             List {
                 ForEach(getWebtoons(weekday: selectedWeekday), id : \.self) { dayWebtoon in
                     webtoonCardBookmark(Webtoon: dayWebtoon)
