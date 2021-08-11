@@ -8,6 +8,10 @@
 import SwiftUI
 import SwiftSoup
 
+class WebtoonViewModel : ObservableObject {
+    
+}
+
 func getWebtoonInfo(urlAddress : String)-> webtoonInfo {
     var information : webtoonInfo = webtoonInfo(imageSource: "", recentUpload: "", recentEpisode: "")
     

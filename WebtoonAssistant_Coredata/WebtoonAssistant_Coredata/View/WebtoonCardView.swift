@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct webtoonCard : View {
     var WebtoonName : String
     var WebtoonUrl : String
@@ -39,13 +38,14 @@ struct webtoonCard : View {
                 } // HStack
             }
         ) // Navigation Link
-       
     }
 }
 
 struct webtoonCardBookmark : View {
     @State var isClicked : Bool = false
     @State var isBookmarked : Int = 0 // 0 : Clicked new Webtoon, 1 : Clicked existed Webtoon
+    @State var alertMessage : String = "북마크에 추가되었습니다."
+
     @Environment(\.managedObjectContext) private var viewContext
     @Environment (\.presentationMode) var presentationMode
     @FetchRequest(entity : Webtoon.entity(), sortDescriptors: [])
@@ -53,21 +53,22 @@ struct webtoonCardBookmark : View {
     
     var SelectedWebtoon : WebtoonNotStored
     var webtoonInformation : webtoonInfo // include image information
-    @State var alertMessage : String = "북마크에 추가되었습니다."
-
+    
     // initializing variable
     init(Webtoon : WebtoonNotStored) {
         self.SelectedWebtoon = Webtoon
         webtoonInformation = getWebtoonInfo(urlAddress: Webtoon.url)
     }
-
+    
     var body: some View {
         HStack {
 //            WebView(urlToLoad: webtoonInformation.imageSource)
 //                .frame(width : 100, height: 80) // thumbnail
+
             Image(systemName : "person.fill")
                 .data(url: URL(string : webtoonInformation.imageSource)!)
                 .frame(width : 100, height: 80)
+            
             Text(SelectedWebtoon.name)
                 .fontWeight(.bold)
             Spacer()
@@ -106,6 +107,5 @@ struct webtoonCardBookmark : View {
                 Alert(title: Text("북마크에 추가"), message: Text(alertMessage), dismissButton: .default(Text("확인")))
             })
         } // HStack
-        
     }
 }
