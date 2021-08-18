@@ -8,7 +8,7 @@
 import SwiftUI
 
 class ImageCacheModel {
-    static let instance = ImageCacheModel() // Singleton patter
+    static let instance = ImageCacheModel() // Singleton pattern
     
     private init() {}
     

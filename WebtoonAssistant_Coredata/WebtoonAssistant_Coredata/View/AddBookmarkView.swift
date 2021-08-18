@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct AddBookmarkView : View {
+    @StateObject var viewmodel = ImageCacheViewModel()
+    
     @Binding var selectedWeekday : String
     @Binding var isPresented : Bool
 
     init(isPresented : Binding<Bool>, selectedWeekday : Binding<String>) {
         _isPresented = isPresented
         _selectedWeekday = selectedWeekday
-        print("add clicked")
     }
     
     var body: some View {

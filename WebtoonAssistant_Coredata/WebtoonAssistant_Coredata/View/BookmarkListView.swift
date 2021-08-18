@@ -11,11 +11,11 @@ struct BookmarkListView : View {
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(entity : Webtoon.entity(), sortDescriptors: [])
     var Webtoons: FetchedResults<Webtoon>
-    
     var body: some View {
         List {
+            //ForEach(ViewModel.getBookmarkedWebtoons(), id : \.self) { Webtoon in
             ForEach(Webtoons, id : \.self) { Webtoon in
-                webtoonCard(WebtoonName: Webtoon.name!, WebtoonUrl: Webtoon.url!)
+                webtoonCard(Webtoon : Webtoon)
             }
             .onDelete { indexSet in
                 for index in indexSet {

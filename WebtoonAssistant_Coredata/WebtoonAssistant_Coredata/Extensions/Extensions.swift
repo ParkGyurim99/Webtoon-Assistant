@@ -1,5 +1,5 @@
 //
-//  ExtensionImage.swift
+//  Extensions.swift
 //  WebtoonAssistant_Coredata
 //
 //  Created by Park Gyurim on 2021/08/08.

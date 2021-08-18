@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A34C1D326BFCABD008B3A78 /* WebtoonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34C1D226BFCABD008B3A78 /* WebtoonViewModel.swift */; };
-		1A34C1D626BFCB1C008B3A78 /* ExtensionImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34C1D526BFCB1C008B3A78 /* ExtensionImage.swift */; };
+		1A34C1D626BFCB1C008B3A78 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34C1D526BFCB1C008B3A78 /* Extensions.swift */; };
 		1A34C1D826BFCC16008B3A78 /* WebtoonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34C1D726BFCC16008B3A78 /* WebtoonCardView.swift */; };
 		1A34C1DA26BFD116008B3A78 /* DayPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34C1D926BFD116008B3A78 /* DayPicker.swift */; };
 		1A34C1F826C02D69008B3A78 /* ImageCacheModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34C1F726C02D68008B3A78 /* ImageCacheModel.swift */; };
@@ -31,7 +31,7 @@
 
 /* Begin PBXFileReference section */
 		1A34C1D226BFCABD008B3A78 /* WebtoonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebtoonViewModel.swift; sourceTree = "<group>"; };
-		1A34C1D526BFCB1C008B3A78 /* ExtensionImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionImage.swift; sourceTree = "<group>"; };
+		1A34C1D526BFCB1C008B3A78 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		1A34C1D726BFCC16008B3A78 /* WebtoonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebtoonCardView.swift; sourceTree = "<group>"; };
 		1A34C1D926BFD116008B3A78 /* DayPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPicker.swift; sourceTree = "<group>"; };
 		1A34C1F726C02D68008B3A78 /* ImageCacheModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheModel.swift; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 		1A34C1D426BFCB08008B3A78 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				1A34C1D526BFCB1C008B3A78 /* ExtensionImage.swift */,
+				1A34C1D526BFCB1C008B3A78 /* Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -300,7 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AB2755125E4E2400013D046 /* SettingsView.swift in Sources */,
-				1A34C1D626BFCB1C008B3A78 /* ExtensionImage.swift in Sources */,
+				1A34C1D626BFCB1C008B3A78 /* Extensions.swift in Sources */,
 				1AB2755425E4E3380013D046 /* WebView.swift in Sources */,
 				1AB2754225E4DD7F0013D046 /* WebtoonAssistant_Coredata.xcdatamodeld in Sources */,
 				1A34C1D326BFCABD008B3A78 /* WebtoonViewModel.swift in Sources */,

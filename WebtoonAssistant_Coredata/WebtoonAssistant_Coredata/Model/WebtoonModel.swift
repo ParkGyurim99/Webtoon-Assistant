@@ -6,9 +6,25 @@
 //
 
 import SwiftUI
+import CoreData
 
 // in Webtoon_CoreDataProperties
 // Extension class Webtoon
+class WebtoonModel {
+    static let instance = WebtoonModel() // Singleton pattern
+    
+    private init() {}
+    
+    @Environment(\.managedObjectContext) private var viewContext
+    @Environment (\.presentationMode) var presentationMode
+    
+    @FetchRequest(entity : Webtoon.entity(), sortDescriptors: [])
+    var Webtoons: FetchedResults<Webtoon>
+    
+    func add(webtoon : WebtoonNotStored) {
+
+    }
+}
 
 // Core data 에 저장되지 않은 웹툰
 struct WebtoonNotStored : Hashable {

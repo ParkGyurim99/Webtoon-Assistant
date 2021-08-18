@@ -13,11 +13,12 @@ struct webtoonCard : View {
     var webtoonInformation : webtoonInfo // include image information
     
     // initializing variable
-    init(WebtoonName : String, WebtoonUrl : String) {
-        self.WebtoonName = WebtoonName
-        self.WebtoonUrl = WebtoonUrl
+    init(Webtoon : Webtoon) {
+        self.WebtoonName = Webtoon.name!
+        self.WebtoonUrl = Webtoon.url!
         webtoonInformation = getWebtoonInfo(urlAddress: WebtoonUrl)
     }
+    
     var body: some View {
         NavigationLink(destination: WebView(urlToLoad : WebtoonUrl),
             label: {
@@ -43,9 +44,8 @@ struct webtoonCard : View {
 
 struct webtoonCardBookmark : View {
     @State var isClicked : Bool = false
-    @State var isBookmarked : Int = 0 // 0 : Clicked new Webtoon, 1 : Clicked existed Webtoon
     @State var alertMessage : String = "북마크에 추가되었습니다."
-
+    
     @Environment(\.managedObjectContext) private var viewContext
     @Environment (\.presentationMode) var presentationMode
     @FetchRequest(entity : Webtoon.entity(), sortDescriptors: [])
@@ -62,9 +62,6 @@ struct webtoonCardBookmark : View {
     
     var body: some View {
         HStack {
-//            WebView(urlToLoad: webtoonInformation.imageSource)
-//                .frame(width : 100, height: 80) // thumbnail
-
             Image(systemName : "person.fill")
                 .data(url: URL(string : webtoonInformation.imageSource)!)
                 .frame(width : 100, height: 80)
@@ -76,14 +73,7 @@ struct webtoonCardBookmark : View {
                 print("\(SelectedWebtoon.name) clicked")
                 isClicked = true
                 
-                for i in 0..<Webtoons.count {
-                    if SelectedWebtoon.name == Webtoons[i].name {
-                        isBookmarked = 1
-                        alertMessage = "이미 추가된 웹툰입니다."
-                    }
-                }
-                
-                if isBookmarked == 0 {
+                if !duplicateCheck(Webtoons: Webtoons, checkWebtoonName: SelectedWebtoon.name) {
                     let newWebtoon = Webtoon(context: viewContext)
                     newWebtoon.name = SelectedWebtoon.name
                     newWebtoon.uploadedDay = SelectedWebtoon.uploadedDay
@@ -97,14 +87,19 @@ struct webtoonCardBookmark : View {
                     } catch {
                         print(error.localizedDescription)
                     }
+                } else {
+                    alertMessage = "이미 추가된 웹툰입니다."
                 }
             }) {
                 Image(systemName: "heart.fill")
-                    .foregroundColor(
-                        duplicateCheck(Webtoons: Webtoons, checkWebtoonName: SelectedWebtoon.name) ? Color.red : Color.gray)
+                    .foregroundColor(duplicateCheck(Webtoons: Webtoons, checkWebtoonName: SelectedWebtoon.name) ? Color.red : Color.gray)
                     .font(.system(size : 30))
             }.alert(isPresented: $isClicked, content: {
-                Alert(title: Text("북마크에 추가"), message: Text(alertMessage), dismissButton: .default(Text("확인")))
+                Alert(
+                    title: Text("북마크에 추가"),
+                    message: Text(alertMessage),
+                    dismissButton: .default(Text("확인"))
+                )
             })
         } // HStack
     }

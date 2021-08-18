@@ -9,6 +9,8 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+    @StateObject var ViewModel = WebtoonViewModel()
+    
     @State var weekday = "mon" // default value == 월, monday
     @State var showAdd : Bool = false
 
@@ -24,7 +26,7 @@ struct ContentView: View {
                     List {
                         ForEach(Webtoons) { Webtoon in
                             if Webtoon.uploadedDay == weekday {
-                                webtoonCard(WebtoonName: Webtoon.name!, WebtoonUrl: Webtoon.url!)
+                                webtoonCard(Webtoon: Webtoon)
                             }
                         }
                         .onDelete { indexSet in // coredata 삭제하기

@@ -7,13 +7,19 @@
 
 import SwiftUI
 import SwiftSoup
+import CoreData
 
 class WebtoonViewModel : ObservableObject {
+    let manager = WebtoonModel.instance
     
+    init() {
+    
+    }
 }
 
 func getWebtoonInfo(urlAddress : String)-> webtoonInfo {
-    var information : webtoonInfo = webtoonInfo(imageSource: "", recentUpload: "", recentEpisode: "")
+    var information : webtoonInfo
+        = webtoonInfo(imageSource: "", recentUpload: "", recentEpisode: "")
     
     guard let url = URL(string : urlAddress)
         else { return webtoonInfo(imageSource: "blank", recentUpload: "", recentEpisode: "") }
