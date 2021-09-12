@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LandingView: View {
+    @StateObject private var viewModel = LandingViewModel()
+    
     var title : some View {
         Text("Webtoon Assistant")
             .font(.largeTitle)
@@ -28,24 +30,32 @@ struct LandingView: View {
     }
     var appendixButton : some View {
         HStack(spacing : 20) {
-            VStack {
-                Image("naverW")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 70, height: 70)
-                    .cornerRadius(10)
-                Text("네이버 웹툰")
+            Button {
+                viewModel.openAppStore(appType: .Naver)
+            } label : {
+                VStack {
+                    Image("naverW")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 70, height: 70)
+                        .cornerRadius(10)
+                    Text("네이버 웹툰")
+                }
             }
             
-            VStack {
-                Image("kakaoW")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 70, height: 70)
-                    .cornerRadius(10)
-                Text("카카오 웹툰")
+            Button {
+                viewModel.openAppStore(appType: .Kakao)
+            } label : {
+                VStack {
+                    Image("kakaoW")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 70, height: 70)
+                        .cornerRadius(10)
+                    Text("카카오 웹툰")
+                }
             }
-            
+                
             VStack(spacing : 4) {
                 NavigationLink(destination : SettingsView()) {
                     Image(systemName: "gearshape.2.fill")

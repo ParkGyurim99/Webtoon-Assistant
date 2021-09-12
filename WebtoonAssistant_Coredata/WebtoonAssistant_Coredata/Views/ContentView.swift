@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @StateObject var viewModel = ContentViewModel()
+    @StateObject private var viewModel = ContentViewModel()
     
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(entity : Webtoon.entity(), sortDescriptors: [])

@@ -15,6 +15,7 @@
 		1A34C1FA26C02DF7008B3A78 /* ImageCacheViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34C1F926C02DF7008B3A78 /* ImageCacheViewModel.swift */; };
 		1AA5339526EDF3E900C8147C /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA5339426EDF3E900C8147C /* LandingView.swift */; };
 		1AA5339726EE036100C8147C /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA5339626EE036100C8147C /* ContentViewModel.swift */; };
+		1AA5339A26EE2A2100C8147C /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA5339926EE2A2100C8147C /* LandingViewModel.swift */; };
 		1AB2753625E4DD7C0013D046 /* WebtoonAssistant_CoredataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB2753525E4DD7C0013D046 /* WebtoonAssistant_CoredataApp.swift */; };
 		1AB2753825E4DD7C0013D046 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB2753725E4DD7C0013D046 /* ContentView.swift */; };
 		1AB2753A25E4DD7F0013D046 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AB2753925E4DD7F0013D046 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		1A34C1F926C02DF7008B3A78 /* ImageCacheViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheViewModel.swift; sourceTree = "<group>"; };
 		1AA5339426EDF3E900C8147C /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		1AA5339626EE036100C8147C /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		1AA5339926EE2A2100C8147C /* LandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModel.swift; sourceTree = "<group>"; };
 		1AB2753225E4DD7C0013D046 /* WebtoonAssistant_Coredata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebtoonAssistant_Coredata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AB2753525E4DD7C0013D046 /* WebtoonAssistant_CoredataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebtoonAssistant_CoredataApp.swift; sourceTree = "<group>"; };
 		1AB2753725E4DD7C0013D046 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,10 +86,10 @@
 			isa = PBXGroup;
 			children = (
 				1A34C1DB26BFD247008B3A78 /* Components */,
+				1AA5339426EDF3E900C8147C /* LandingView.swift */,
 				1AB2753725E4DD7C0013D046 /* ContentView.swift */,
 				1AB5921D25E63A060087FDEB /* BookmarkListView.swift */,
 				1AB2755625E4E3CF0013D046 /* AddBookmarkView.swift */,
-				1AA5339426EDF3E900C8147C /* LandingView.swift */,
 				1AB2755025E4E2400013D046 /* SettingsView.swift */,
 				1A34C1D726BFCC16008B3A78 /* WebtoonCardView.swift */,
 			);
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				1A34C1D226BFCABD008B3A78 /* WebtoonViewModel.swift */,
+				1AA5339926EE2A2100C8147C /* LandingViewModel.swift */,
 				1AA5339626EE036100C8147C /* ContentViewModel.swift */,
 			);
 			path = ViewModels;
@@ -319,6 +322,7 @@
 				1AB2755425E4E3380013D046 /* WebServices.swift in Sources */,
 				1AB2754225E4DD7F0013D046 /* WebtoonAssistant_Coredata.xcdatamodeld in Sources */,
 				1A34C1D326BFCABD008B3A78 /* WebtoonViewModel.swift in Sources */,
+				1AA5339A26EE2A2100C8147C /* LandingViewModel.swift in Sources */,
 				1AB2755B25E4E5440013D046 /* WebtoonModel.swift in Sources */,
 				1A34C1FA26C02DF7008B3A78 /* ImageCacheViewModel.swift in Sources */,
 				1AB2755725E4E3CF0013D046 /* AddBookmarkView.swift in Sources */,
