@@ -11,6 +11,7 @@ struct BookmarkListView : View {
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(entity : Webtoon.entity(), sortDescriptors: [])
     var Webtoons: FetchedResults<Webtoon>
+    
     var body: some View {
         List {
             //ForEach(ViewModel.getBookmarkedWebtoons(), id : \.self) { Webtoon in

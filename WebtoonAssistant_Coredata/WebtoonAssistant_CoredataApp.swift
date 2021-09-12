@@ -13,7 +13,7 @@ struct WebtoonAssistant_CoredataApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LandingView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

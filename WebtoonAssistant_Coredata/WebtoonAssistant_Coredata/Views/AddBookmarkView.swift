@@ -7,9 +7,7 @@
 
 import SwiftUI
 
-struct AddBookmarkView : View {
-    @StateObject var viewmodel = ImageCacheViewModel()
-    
+struct AddBookmarkView : View {    
     @Binding var selectedWeekday : String
     @Binding var isPresented : Bool
 
@@ -18,25 +16,26 @@ struct AddBookmarkView : View {
         _selectedWeekday = selectedWeekday
     }
     
+    var title : some View {
+        HStack {
+            Text("북마크 추가하기")
+                .font(.largeTitle)
+                .bold()
+            Spacer()
+            Button {
+                isPresented.toggle()
+            } label : {
+                Image(systemName : "xmark")
+                    .font(.system(size : 25))
+                    .foregroundColor(.white)
+            }
+        }
+        .padding(20)
+    }
+    
     var body: some View {
         VStack {
-            // Title
-            HStack {
-                Text("북마크에 추가하기")
-                    .font(.largeTitle)
-                    .bold()
-                Spacer()
-                Button {
-                    isPresented.toggle()
-                } label : {
-                    Image(systemName : "xmark")
-                        .foregroundColor(.black)
-                        .font(.system(size : 25))
-                }
-            }
-            .padding(.horizontal, 20)
-            .padding(.top, 20)
-            
+            title
             DayPicker(selectedWeekday: $selectedWeekday)
             List {
                 ForEach(getWebtoons(weekday: selectedWeekday), id : \.self) { dayWebtoon in

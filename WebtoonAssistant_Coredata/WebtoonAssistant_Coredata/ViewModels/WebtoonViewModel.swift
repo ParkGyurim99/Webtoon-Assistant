@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftSoup
 import CoreData
 
-class WebtoonViewModel : ObservableObject {
+final class WebtoonViewModel : ObservableObject {
     let manager = WebtoonModel.instance
     
     init() {
