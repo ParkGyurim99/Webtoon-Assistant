@@ -8,26 +8,24 @@
 import SwiftUI
 
 struct webtoonCard : View {
-    var WebtoonName : String
-    var WebtoonUrl : String
+    var Webtoon : Webtoon
     var webtoonInformation : webtoonInfo // include image information
     
     // initializing variable
     init(Webtoon : Webtoon) {
-        self.WebtoonName = Webtoon.name!
-        self.WebtoonUrl = Webtoon.url!
-        webtoonInformation = getWebtoonInfo(urlAddress: WebtoonUrl)
+        self.Webtoon = Webtoon
+        webtoonInformation = getWebtoonInfo(urlAddress: Webtoon.url!)
     }
     
     var body: some View {
-        NavigationLink(destination: WebView(urlToLoad : WebtoonUrl),
+        NavigationLink(destination: WebView(urlToLoad : Webtoon.url!),
             label: {
                 HStack {
                     Image(systemName : "person.fill")
                         .data(url: URL(string : webtoonInformation.imageSource)!)
                         .frame(width : 100, height: 80)
                     VStack (alignment : .leading) {
-                        Text(WebtoonName)
+                        Text(Webtoon.name!)
                             .fontWeight(.bold)
                         Text(webtoonInformation.recentUpload + "\n" + webtoonInformation.recentEpisode)
                             .font(.system(size : 15))
@@ -102,5 +100,43 @@ struct webtoonCardBookmark : View {
                 )
             })
         } // HStack
+    }
+}
+
+
+struct CardView : View {
+    // Coredata Webtoon Array
+    @Environment(\.managedObjectContext) private var viewContext
+    @Environment (\.presentationMode) var presentationMode
+    @FetchRequest(entity : Webtoon.entity(), sortDescriptors: [])
+    var Webtoons : FetchedResults<Webtoon>
+    
+    var webtoon : Webtoon
+    
+    init(webtoon : Webtoon) {
+        self.webtoon = webtoon
+    }
+    
+    var body : some View {
+        NavigationLink(
+            destination : WebView(urlToLoad: "https://m.naver.com"),
+            isActive : .constant(false)
+        ) {
+            HStack {
+                Image(systemName : "person.fill")
+                    .frame(width : 100, height: 80)
+                VStack (alignment : .leading) {
+                    Text("Name Area")
+                        .fontWeight(.bold)
+                    Text("Last Uploaded Day\nLast Episode Title")
+                        .font(.system(size : 15))
+                        .foregroundColor(.secondary)
+                } // VStack
+                Spacer()
+                Image(systemName: "heart.fill")
+                    .foregroundColor(.red)
+                    .font(.system(size : 30))
+            } // HStack
+        } // NavigationLink
     }
 }

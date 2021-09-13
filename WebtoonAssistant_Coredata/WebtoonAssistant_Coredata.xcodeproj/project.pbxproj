@@ -27,7 +27,7 @@
 		1AB2755125E4E2400013D046 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB2755025E4E2400013D046 /* SettingsView.swift */; };
 		1AB2755425E4E3380013D046 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB2755325E4E3380013D046 /* WebServices.swift */; };
 		1AB2755725E4E3CF0013D046 /* AddBookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB2755625E4E3CF0013D046 /* AddBookmarkView.swift */; };
-		1AB2755B25E4E5440013D046 /* WebtoonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB2755A25E4E5440013D046 /* WebtoonModel.swift */; };
+		1AB2755B25E4E5440013D046 /* Webtoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB2755A25E4E5440013D046 /* Webtoon.swift */; };
 		1AB5921E25E63A060087FDEB /* BookmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB5921D25E63A060087FDEB /* BookmarkListView.swift */; };
 		832A5AD45A4EE4C7B3CB8C10 /* Pods_WebtoonAssistant_Coredata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8376484B665A87303060F34 /* Pods_WebtoonAssistant_Coredata.framework */; };
 /* End PBXBuildFile section */
@@ -55,7 +55,7 @@
 		1AB2755025E4E2400013D046 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		1AB2755325E4E3380013D046 /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		1AB2755625E4E3CF0013D046 /* AddBookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookmarkView.swift; sourceTree = "<group>"; };
-		1AB2755A25E4E5440013D046 /* WebtoonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebtoonModel.swift; sourceTree = "<group>"; };
+		1AB2755A25E4E5440013D046 /* Webtoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webtoon.swift; sourceTree = "<group>"; };
 		1AB5921D25E63A060087FDEB /* BookmarkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListView.swift; sourceTree = "<group>"; };
 		99AC8CE795E3650128832DA0 /* Pods-WebtoonAssistant_Coredata.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebtoonAssistant_Coredata.debug.xcconfig"; path = "Target Support Files/Pods-WebtoonAssistant_Coredata/Pods-WebtoonAssistant_Coredata.debug.xcconfig"; sourceTree = "<group>"; };
 		A8376484B665A87303060F34 /* Pods_WebtoonAssistant_Coredata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebtoonAssistant_Coredata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,7 +109,7 @@
 		1A34C1D026BFCA1D008B3A78 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1AB2755A25E4E5440013D046 /* WebtoonModel.swift */,
+				1AB2755A25E4E5440013D046 /* Webtoon.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -323,7 +323,7 @@
 				1AB2754225E4DD7F0013D046 /* WebtoonAssistant_Coredata.xcdatamodeld in Sources */,
 				1A34C1D326BFCABD008B3A78 /* WebtoonViewModel.swift in Sources */,
 				1AA5339A26EE2A2100C8147C /* LandingViewModel.swift in Sources */,
-				1AB2755B25E4E5440013D046 /* WebtoonModel.swift in Sources */,
+				1AB2755B25E4E5440013D046 /* Webtoon.swift in Sources */,
 				1A34C1FA26C02DF7008B3A78 /* ImageCacheViewModel.swift in Sources */,
 				1AB2755725E4E3CF0013D046 /* AddBookmarkView.swift in Sources */,
 				1AB2754C25E4E0620013D046 /* Webtoon+CoreDataClass.swift in Sources */,

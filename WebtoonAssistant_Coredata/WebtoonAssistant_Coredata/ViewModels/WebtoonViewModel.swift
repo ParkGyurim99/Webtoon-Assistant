@@ -10,11 +10,7 @@ import SwiftSoup
 import CoreData
 
 final class WebtoonViewModel : ObservableObject {
-    let manager = WebtoonModel.instance
-    
-    init() {
-    
-    }
+
 }
 
 func getWebtoonInfo(urlAddress : String)-> webtoonInfo {
