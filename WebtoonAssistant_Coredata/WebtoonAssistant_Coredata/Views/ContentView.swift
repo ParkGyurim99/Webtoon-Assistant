@@ -39,7 +39,8 @@ struct ContentView: View {
                 List {
                     ForEach(Webtoons) { Webtoon in
                         if Webtoon.uploadedDay == viewModel.weekday {
-                            webtoonCard(Webtoon: Webtoon)
+                            //webtoonCard(Webtoon: Webtoon)
+                            webtoonCard(viewModel : CardViewModel(webtoon: Webtoon))
                         }
                     }
                     .onDelete { indexSet in // coredata 삭제하기

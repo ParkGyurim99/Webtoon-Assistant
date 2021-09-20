@@ -8,38 +8,31 @@
 import SwiftUI
 
 struct webtoonCard : View {
-    var Webtoon : Webtoon
-    var webtoonInformation : webtoonInfo // include image information
+    let viewModel : CardViewModel
 
-    // initializing variable
-    init(Webtoon : Webtoon) {
-        self.Webtoon = Webtoon
-        webtoonInformation = getWebtoonInfo(urlAddress: Webtoon.url!)
+    init(viewModel : CardViewModel) {
+        self.viewModel = viewModel
     }
 
     var body: some View {
-        NavigationLink(destination: WebView(urlToLoad : Webtoon.url!),
-            label: {
-                HStack {
-                    Image(systemName : "person.fill")
-                        .data(url: URL(string : webtoonInformation.imageSource)!)
-                        .frame(width : 100, height: 80)
-                    VStack (alignment : .leading) {
-                        Text(Webtoon.name!)
-                            .fontWeight(.bold)
-                        Text(webtoonInformation.recentUpload + "\n" + webtoonInformation.recentEpisode)
-                            .font(.system(size : 15))
-                            .foregroundColor(.secondary)
-                    } // VStack
-                    Spacer()
-                    Image(systemName: "heart.fill")
-                        .foregroundColor(Color.red)
-                } // HStack
-            }
-        ) // Navigation Link
+        NavigationLink(destination: WebView(urlToLoad : viewModel.url)) {
+            HStack {
+                Image(systemName : "person.fill")
+                    .data(url: URL(string : viewModel.imageSource)!)
+                    .frame(width : 100, height: 80)
+                VStack (alignment : .leading) {
+                    Text(viewModel.title)
+                        .fontWeight(.bold)
+                    Text(viewModel.subTitle1 + "\n" + viewModel.subTitle2)
+                        .font(.system(size : 15))
+                        .foregroundColor(.secondary)
+                } // VStack
+                Spacer()
+                Image(systemName: "heart.fill").foregroundColor(Color.red)
+            } // HStack
+        }
     }
 }
-
 
 struct webtoonCardBookmark : View {    
     @State var isClicked : Bool = false

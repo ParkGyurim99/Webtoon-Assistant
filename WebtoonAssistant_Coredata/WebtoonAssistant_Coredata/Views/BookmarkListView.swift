@@ -15,7 +15,7 @@ struct BookmarkListView : View {
     var body: some View {
         List {
             ForEach(Webtoons, id : \.self) { Webtoon in
-                webtoonCard(Webtoon : Webtoon)
+                webtoonCard(viewModel : CardViewModel(webtoon: Webtoon))
             }
             .onDelete { indexSet in
                 for index in indexSet {
