@@ -18,13 +18,11 @@ struct WebtoonNotStored : Hashable {
     var url : String
     var bookmarked : Bool
 }
-
 struct webtoonInfo {
     var imageSource : String // 이미지 소스 url
     var recentUpload : String // 최근 업로드 날짜
     var recentEpisode : String // 최근화 제목
 }
-
 enum contentProvider : String {
     case naver = "네이버"
     case kakao = "카카오"

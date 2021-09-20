@@ -61,6 +61,7 @@ struct ContentView: View {
         .navigationTitle(viewModel.title)
         .sheet(isPresented: $viewModel.showAdd, content: {
             AddBookmarkView(isPresented: $viewModel.showAdd, selectedWeekday: $viewModel.weekday)
+                .preferredColorScheme(.dark)
         })
     }
 }

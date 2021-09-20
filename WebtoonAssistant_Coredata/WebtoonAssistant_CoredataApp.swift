@@ -15,6 +15,7 @@ struct WebtoonAssistant_CoredataApp: App {
         WindowGroup {
             LandingView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .preferredColorScheme(.dark)
         }
     }
 }

@@ -14,7 +14,6 @@ struct BookmarkListView : View {
     
     var body: some View {
         List {
-            //ForEach(ViewModel.getBookmarkedWebtoons(), id : \.self) { Webtoon in
             ForEach(Webtoons, id : \.self) { Webtoon in
                 webtoonCard(Webtoon : Webtoon)
             }
