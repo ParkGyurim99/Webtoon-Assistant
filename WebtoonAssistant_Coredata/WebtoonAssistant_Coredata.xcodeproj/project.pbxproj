@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -31,6 +31,8 @@
 		1AB5921E25E63A060087FDEB /* BookmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB5921D25E63A060087FDEB /* BookmarkListView.swift */; };
 		1ABDEA5926F8A6530031DF0B /* BookmarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDEA5826F8A6530031DF0B /* BookmarkViewModel.swift */; };
 		1ABDEA5B26F8AD300031DF0B /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDEA5A26F8AD300031DF0B /* CardViewModel.swift */; };
+		1AFC97132700D39200BF903D /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1AFC97122700D39200BF903D /* URLImage */; };
+		1AFC97152700D39200BF903D /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = 1AFC97142700D39200BF903D /* URLImageStore */; };
 		832A5AD45A4EE4C7B3CB8C10 /* Pods_WebtoonAssistant_Coredata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8376484B665A87303060F34 /* Pods_WebtoonAssistant_Coredata.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AFC97132700D39200BF903D /* URLImage in Frameworks */,
+				1AFC97152700D39200BF903D /* URLImageStore in Frameworks */,
 				832A5AD45A4EE4C7B3CB8C10 /* Pods_WebtoonAssistant_Coredata.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,6 +231,10 @@
 			dependencies = (
 			);
 			name = WebtoonAssistant_Coredata;
+			packageProductDependencies = (
+				1AFC97122700D39200BF903D /* URLImage */,
+				1AFC97142700D39200BF903D /* URLImageStore */,
+			);
 			productName = WebtoonAssistant_Coredata;
 			productReference = 1AB2753225E4DD7C0013D046 /* WebtoonAssistant_Coredata.app */;
 			productType = "com.apple.product-type.application";
@@ -254,6 +262,9 @@
 				Base,
 			);
 			mainGroup = 1AB2752925E4DD7C0013D046;
+			packageReferences = (
+				1AFC97112700D39100BF903D /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 1AB2753325E4DD7C0013D046 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -534,6 +545,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1AFC97112700D39100BF903D /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1AFC97122700D39200BF903D /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1AFC97112700D39100BF903D /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+		1AFC97142700D39200BF903D /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1AFC97112700D39100BF903D /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1AB2754025E4DD7F0013D046 /* WebtoonAssistant_Coredata.xcdatamodeld */ = {

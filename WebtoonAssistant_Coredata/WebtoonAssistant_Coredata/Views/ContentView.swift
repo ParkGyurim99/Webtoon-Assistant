@@ -53,7 +53,7 @@ struct ContentView: View {
                             print(error.localizedDescription)
                         }
                     }
-                }.listStyle(InsetGroupedListStyle())
+                }.listStyle(InsetGroupedListStyle()) // -> iOS15 Default
             } // VStack
             
             // Add Bookmark Button on ZStack

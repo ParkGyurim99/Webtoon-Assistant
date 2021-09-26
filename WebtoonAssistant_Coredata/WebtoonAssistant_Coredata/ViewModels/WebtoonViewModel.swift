@@ -9,9 +9,6 @@ import SwiftUI
 import SwiftSoup
 import CoreData
 
-final class WebtoonViewModel : ObservableObject {
-
-}
 
 // 요일별 웹툰 받아오기
 func getWebtoons(weekday : String) -> [WebtoonNotStored] {

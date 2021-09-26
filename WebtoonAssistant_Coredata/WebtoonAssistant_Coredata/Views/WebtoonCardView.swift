@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import URLImage
 
 struct webtoonCard : View {
-    let viewModel : CardViewModel
+    private let viewModel : CardViewModel
 
+    // Injecting viewModel for each Webtoon
     init(viewModel : CardViewModel) {
         self.viewModel = viewModel
     }
@@ -17,9 +19,9 @@ struct webtoonCard : View {
     var body: some View {
         NavigationLink(destination: WebView(urlToLoad : viewModel.url)) {
             HStack {
-                Image(systemName : "person.fill")
-                    .data(url: URL(string : viewModel.imageSource)!)
-                    .frame(width : 100, height: 80)
+                URLImage(viewModel.imageUrl) { image in
+                    image.resizable()
+                }.frame(width : 100, height: 80)
                 VStack (alignment : .leading) {
                     Text(viewModel.title)
                         .fontWeight(.bold)
@@ -37,6 +39,7 @@ struct webtoonCard : View {
 struct webtoonCardBookmark : View {    
     @State var isClicked : Bool = false
     @State var alertMessage : String = "북마크에 추가되었습니다."
+    // bookmark에 추가할때마다 view가 리프레시 되는 문제
     
     @Environment(\.managedObjectContext) private var viewContext
     @Environment (\.presentationMode) var presentationMode
@@ -54,9 +57,9 @@ struct webtoonCardBookmark : View {
     
     var body: some View {
         HStack {
-            Image(systemName : "person.fill")
-                .data(url: URL(string : webtoonInformation.imageSource)!)
-                .frame(width : 100, height: 80)
+            URLImage(URL(string : webtoonInformation.imageSource)!) {image in
+                image.resizable()
+            }.frame(width : 100, height: 80)
             Text(SelectedWebtoon.name)
                 .fontWeight(.bold)
             Spacer()

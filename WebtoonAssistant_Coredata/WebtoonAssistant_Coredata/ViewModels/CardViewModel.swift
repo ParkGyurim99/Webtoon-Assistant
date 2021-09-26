@@ -18,18 +18,16 @@ final class CardViewModel : ObservableObject {
     }
     
     var title : String { return webtoon.name! }
-    var imageSource : String { webtoonInformation.imageSource }
+    var imageUrl : URL { URL(string : webtoonInformation.imageSource)! }
     var subTitle1 : String { webtoonInformation.recentUpload }
     var subTitle2 : String { webtoonInformation.recentEpisode }
     var url : String { webtoon.url! }
 }
 
 func getWebtoonInfo(urlAddress : String)-> webtoonInfo {
-    var information : webtoonInfo
-        = webtoonInfo(imageSource: "", recentUpload: "", recentEpisode: "")
+    var information : webtoonInfo = webtoonInfo(imageSource: "", recentUpload: "", recentEpisode: "")
     
-    guard let url = URL(string : urlAddress)
-        else { return webtoonInfo(imageSource: "blank", recentUpload: "", recentEpisode: "") }
+    guard let url = URL(string : urlAddress) else { return webtoonInfo(imageSource: "blank", recentUpload: "", recentEpisode: "") }
     
     do {
         let html = try String(contentsOf: url, encoding: .utf8)
@@ -42,7 +40,6 @@ func getWebtoonInfo(urlAddress : String)-> webtoonInfo {
 //        // 작가명
 //        let writer : Element = try doc.select("div.comicinfo").select("div.detail").select("h2 span").first()!
 //        print(try writer.text())
-        
         
         // 최근 업로드 날짜
         let recentUpload : Element = try doc.select("td.num").first()!

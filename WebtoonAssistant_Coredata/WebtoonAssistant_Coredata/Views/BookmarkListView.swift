@@ -27,6 +27,8 @@ struct BookmarkListView : View {
                     print(error.localizedDescription)
                 }
             }
-        }.navigationTitle("북마크 모아보기")
+        }
+        .listStyle(PlainListStyle())
+        .navigationBarTitle("북마크 모아보기", displayMode: .inline)
     }
 }

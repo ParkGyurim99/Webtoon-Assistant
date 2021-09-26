@@ -41,7 +41,7 @@ struct AddBookmarkView : View {
                 ForEach(getWebtoons(weekday: selectedWeekday), id : \.self) { dayWebtoon in
                     webtoonCardBookmark(Webtoon: dayWebtoon)
                 }
-            }
+            }.listStyle(PlainListStyle())
         }
     }
 }
