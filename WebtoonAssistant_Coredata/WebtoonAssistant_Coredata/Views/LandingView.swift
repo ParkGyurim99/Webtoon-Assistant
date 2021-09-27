@@ -92,9 +92,3 @@ struct LandingView: View {
         } // NavigationView
     }
 }
-
-struct LandingView_Previews: PreviewProvider {
-    static var previews: some View {
-        LandingView()
-    }
-}

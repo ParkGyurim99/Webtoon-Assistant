@@ -60,9 +60,9 @@ struct ContentView: View {
             addButton
         } // ZStack
         .navigationTitle(viewModel.title)
-        .sheet(isPresented: $viewModel.showAdd, content: {
+        .sheet(isPresented: $viewModel.showAdd) {
             AddBookmarkView(isPresented: $viewModel.showAdd, selectedWeekday: $viewModel.weekday)
                 .preferredColorScheme(.dark)
-        })
+        }
     }
 }

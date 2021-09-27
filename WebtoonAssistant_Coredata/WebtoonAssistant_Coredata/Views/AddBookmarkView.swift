@@ -38,8 +38,8 @@ struct AddBookmarkView : View {
             title
             DayPicker(selectedWeekday: $selectedWeekday)
             List {
-                ForEach(getWebtoons(weekday: selectedWeekday), id : \.self) { dayWebtoon in
-                    webtoonCardBookmark(Webtoon: dayWebtoon)
+                ForEach(WebtoonViewModel.getWebtoons(weekday: selectedWeekday), id : \.self) { dayWebtoon in
+                    BookmarkedCard(viewModel: CardBookmarkedViewModel(webtoon: dayWebtoon))
                 }
             }.listStyle(PlainListStyle())
         }

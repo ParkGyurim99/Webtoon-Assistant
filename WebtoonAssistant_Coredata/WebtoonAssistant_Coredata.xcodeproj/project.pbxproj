@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1A34C1D326BFCABD008B3A78 /* WebtoonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34C1D226BFCABD008B3A78 /* WebtoonViewModel.swift */; };
 		1A34C1D626BFCB1C008B3A78 /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34C1D526BFCB1C008B3A78 /* Image+Extensions.swift */; };
-		1A34C1D826BFCC16008B3A78 /* WebtoonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34C1D726BFCC16008B3A78 /* WebtoonCardView.swift */; };
+		1A34C1D826BFCC16008B3A78 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34C1D726BFCC16008B3A78 /* CardView.swift */; };
 		1A34C1DA26BFD116008B3A78 /* DayPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34C1D926BFD116008B3A78 /* DayPicker.swift */; };
 		1A34C1F826C02D69008B3A78 /* ImageCacheModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34C1F726C02D68008B3A78 /* ImageCacheModel.swift */; };
 		1A34C1FA26C02DF7008B3A78 /* ImageCacheViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34C1F926C02DF7008B3A78 /* ImageCacheViewModel.swift */; };
@@ -29,8 +29,9 @@
 		1AB2755725E4E3CF0013D046 /* AddBookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB2755625E4E3CF0013D046 /* AddBookmarkView.swift */; };
 		1AB2755B25E4E5440013D046 /* Webtoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB2755A25E4E5440013D046 /* Webtoon.swift */; };
 		1AB5921E25E63A060087FDEB /* BookmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB5921D25E63A060087FDEB /* BookmarkListView.swift */; };
-		1ABDEA5926F8A6530031DF0B /* BookmarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDEA5826F8A6530031DF0B /* BookmarkViewModel.swift */; };
 		1ABDEA5B26F8AD300031DF0B /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDEA5A26F8AD300031DF0B /* CardViewModel.swift */; };
+		1ADD9DB72701BD43008342A7 /* CardBookmarkedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADD9DB62701BD42008342A7 /* CardBookmarkedView.swift */; };
+		1ADD9DB92701BE20008342A7 /* CardBookmarkedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADD9DB82701BE20008342A7 /* CardBookmarkedViewModel.swift */; };
 		1AFC97132700D39200BF903D /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1AFC97122700D39200BF903D /* URLImage */; };
 		1AFC97152700D39200BF903D /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = 1AFC97142700D39200BF903D /* URLImageStore */; };
 		832A5AD45A4EE4C7B3CB8C10 /* Pods_WebtoonAssistant_Coredata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8376484B665A87303060F34 /* Pods_WebtoonAssistant_Coredata.framework */; };
@@ -39,7 +40,7 @@
 /* Begin PBXFileReference section */
 		1A34C1D226BFCABD008B3A78 /* WebtoonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebtoonViewModel.swift; sourceTree = "<group>"; };
 		1A34C1D526BFCB1C008B3A78 /* Image+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
-		1A34C1D726BFCC16008B3A78 /* WebtoonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebtoonCardView.swift; sourceTree = "<group>"; };
+		1A34C1D726BFCC16008B3A78 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		1A34C1D926BFD116008B3A78 /* DayPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPicker.swift; sourceTree = "<group>"; };
 		1A34C1F726C02D68008B3A78 /* ImageCacheModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheModel.swift; sourceTree = "<group>"; };
 		1A34C1F926C02DF7008B3A78 /* ImageCacheViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheViewModel.swift; sourceTree = "<group>"; };
@@ -61,8 +62,9 @@
 		1AB2755625E4E3CF0013D046 /* AddBookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookmarkView.swift; sourceTree = "<group>"; };
 		1AB2755A25E4E5440013D046 /* Webtoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webtoon.swift; sourceTree = "<group>"; };
 		1AB5921D25E63A060087FDEB /* BookmarkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListView.swift; sourceTree = "<group>"; };
-		1ABDEA5826F8A6530031DF0B /* BookmarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewModel.swift; sourceTree = "<group>"; };
 		1ABDEA5A26F8AD300031DF0B /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		1ADD9DB62701BD42008342A7 /* CardBookmarkedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBookmarkedView.swift; sourceTree = "<group>"; };
+		1ADD9DB82701BE20008342A7 /* CardBookmarkedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBookmarkedViewModel.swift; sourceTree = "<group>"; };
 		99AC8CE795E3650128832DA0 /* Pods-WebtoonAssistant_Coredata.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebtoonAssistant_Coredata.debug.xcconfig"; path = "Target Support Files/Pods-WebtoonAssistant_Coredata/Pods-WebtoonAssistant_Coredata.debug.xcconfig"; sourceTree = "<group>"; };
 		A8376484B665A87303060F34 /* Pods_WebtoonAssistant_Coredata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebtoonAssistant_Coredata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA79577470AF36F4CE413E3F /* Pods-WebtoonAssistant_Coredata.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebtoonAssistant_Coredata.release.xcconfig"; path = "Target Support Files/Pods-WebtoonAssistant_Coredata/Pods-WebtoonAssistant_Coredata.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,7 +101,8 @@
 				1AB5921D25E63A060087FDEB /* BookmarkListView.swift */,
 				1AB2755625E4E3CF0013D046 /* AddBookmarkView.swift */,
 				1AB2755025E4E2400013D046 /* SettingsView.swift */,
-				1A34C1D726BFCC16008B3A78 /* WebtoonCardView.swift */,
+				1A34C1D726BFCC16008B3A78 /* CardView.swift */,
+				1ADD9DB62701BD42008342A7 /* CardBookmarkedView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -110,8 +113,8 @@
 				1A34C1D226BFCABD008B3A78 /* WebtoonViewModel.swift */,
 				1AA5339926EE2A2100C8147C /* LandingViewModel.swift */,
 				1AA5339626EE036100C8147C /* ContentViewModel.swift */,
-				1ABDEA5826F8A6530031DF0B /* BookmarkViewModel.swift */,
 				1ABDEA5A26F8AD300031DF0B /* CardViewModel.swift */,
+				1ADD9DB82701BE20008342A7 /* CardBookmarkedViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -336,8 +339,8 @@
 				1ABDEA5B26F8AD300031DF0B /* CardViewModel.swift in Sources */,
 				1AA5339526EDF3E900C8147C /* LandingView.swift in Sources */,
 				1AB2755125E4E2400013D046 /* SettingsView.swift in Sources */,
+				1ADD9DB72701BD43008342A7 /* CardBookmarkedView.swift in Sources */,
 				1A34C1D626BFCB1C008B3A78 /* Image+Extensions.swift in Sources */,
-				1ABDEA5926F8A6530031DF0B /* BookmarkViewModel.swift in Sources */,
 				1AB2755425E4E3380013D046 /* WebServices.swift in Sources */,
 				1AB2754225E4DD7F0013D046 /* WebtoonAssistant_Coredata.xcdatamodeld in Sources */,
 				1A34C1D326BFCABD008B3A78 /* WebtoonViewModel.swift in Sources */,
@@ -353,8 +356,9 @@
 				1AB5921E25E63A060087FDEB /* BookmarkListView.swift in Sources */,
 				1AB2753825E4DD7C0013D046 /* ContentView.swift in Sources */,
 				1A34C1DA26BFD116008B3A78 /* DayPicker.swift in Sources */,
+				1ADD9DB92701BE20008342A7 /* CardBookmarkedViewModel.swift in Sources */,
 				1AB2753625E4DD7C0013D046 /* WebtoonAssistant_CoredataApp.swift in Sources */,
-				1A34C1D826BFCC16008B3A78 /* WebtoonCardView.swift in Sources */,
+				1A34C1D826BFCC16008B3A78 /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

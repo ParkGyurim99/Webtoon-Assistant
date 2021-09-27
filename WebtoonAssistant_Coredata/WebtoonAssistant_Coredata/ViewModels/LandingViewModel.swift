@@ -12,7 +12,6 @@ final class LandingViewModel : ObservableObject {
     func openAppStore(appType: Provider) {
         let appId = appType.rawValue
         let url = "https://apps.apple.com/kr/app/" + appId;
-//        let url = "https://m.naver.com"
         if let url = URL(string: url), UIApplication.shared.canOpenURL(url) {
             if #available(iOS 10.0, *) {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
