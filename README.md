@@ -16,9 +16,11 @@ Subscribe your favorite webtoon with simplest interface.
     
     with **_Swift Soup_** : https://github.com/scinfu/SwiftSoup
     
-  - Fetching url image with **_URLImage_** : https://github.com/dmytro-anokhin/url-image
+  - Fetching url image 
+  
+    with **_URLImage_** : https://github.com/dmytro-anokhin/url-image
 
-### - Data Handling
+### - Data Handlin
   
   - Save bookmarked webtoons in local device's storage with **_Swift Core Data_**
 
