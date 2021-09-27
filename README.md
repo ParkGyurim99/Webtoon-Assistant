@@ -20,7 +20,7 @@ Subscribe your favorite webtoon with simplest interface.
   
     with **_URLImage_** : https://github.com/dmytro-anokhin/url-image
 
-### - Data Handlin
+### - Data Handling
   
   - Save bookmarked webtoons in local device's storage with **_Swift Core Data_**
 
